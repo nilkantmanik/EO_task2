@@ -1,0 +1,7046 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.uniqueRecords {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+// @import "~office-ui-fabric-react/dist/css/fabric.css";
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+// @import '~@fluentui/react/dist/sass/References.scss';
+// @import "~office-ui-fabric-react/dist/css/fabric.css";
+// let x
+// let y
+
+:root {
+  --panel: "none";
+  --titleHeader: "block";
+  --commandBar: "none";
+  --lightdarkBG: "#fff";
+  --lightdarkColor: "#323130";
+  --lightdarkChange: "#323130";
+  --lightdarkBGGray: "#e9e9e9";
+  --lightdarkHoverBG: "F4f4f4";
+  --paddingaa: "8px";
+  --marginaa: "24px 0px";
+  --padding: "0px";
+  --margin: "0px";
+  --paddingTop: "0px";
+  --maxWidth: "100% !important";
+  --maxWidth1236: "1268px";
+  --spappBarhide: "block";
+  --DashboardBGColors: transparent;
+  --selectionCheckboxBG : #fff;
+}
+
+.saveIconAdvancesettingDropdown {
+  position: absolute;
+  font-size: 16px;
+  right: 29px;
+  top: 13px;
+}
+
+.dialgboxbtn {
+  min-width: 120px !important;
+  width: 100% !important;
+  max-width: 110px !important;
+}
+
+.addnew {
+  display: inline-flex;
+  flex: 50%;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.FormColumn {
+  display: "inline-grid";
+  width: 92% !important;
+}
+
+.ListColum {
+  background-color: var(--lightdarkBGTable);
+}
+
+.selectColumn {
+  width: 100%;
+}
+
+.button1 {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  padding-left: 8px;
+}
+
+.button2 {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+}
+
+.buttonMain {
+  min-width: 90px !important;
+  max-width: 10px !important;
+  align-items: center;
+}
+
+.PrimaryButton2Long {
+  min-width: 131px;
+  max-width: 135px;
+}
+
+.InfoIconStyles {
+  display: grid;
+  grid-template-columns: 216px 1fr;
+  align-items: center;
+}
+
+.InfoIconStyles1 {
+  display: grid;
+  grid-template-columns: 193px 1fr;
+  align-items: center;
+}
+
+.OverwriteInfo {
+  display: flex;
+}
+
+.InfoIconStyles2 {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  align-items: center;
+}
+
+.CheckboxL {
+  margin-top: 1px;
+}
+
+.CheckboxLU {
+  margin-top: 2px;
+}
+
+.CheckboxF {
+  margin-top: 2px;
+}
+
+.BtnSaveAlign {
+  margin-top: 10px;
+}
+
+.ToggleOver {
+  display: grid;
+  grid-template-columns: 543px 1fr;
+}
+
+:global {
+
+  *:fullscreen
+*:-ms-fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+   overflow: auto !important;
+}
+.SPPageChrome{
+  overflow: auto;
+}
+.SelectionCheckBox + span{
+  margin-left: 10px; 
+}
+:has(+ .SelectionCheckBox){
+  margin-left: 0px !important; 
+}
+.SelectionCheckBox .ms-Checkbox-checkbox{
+ background-color: var(--selectionCheckboxBG) !important;
+}
+
+.EssProfilepic{
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 7px 7px 0px;
+  overflow: hidden;
+  background: #000;
+}
+.EssProfilepic:hover .Ess_profilepic__content {
+  opacity: 1;
+}
+
+.EssProfilepic:hover .Ess_profilepic__image {
+  opacity: .5;
+}
+
+.Ess_profilepic__image {
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+
+.Ess_profilepic__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.Ess_profilepic__icon {
+  color: white;
+  padding-bottom: 8px;
+}
+
+.Ess_profilepic__image>.ms-Persona-coin{
+  div{
+  div{
+   border-radius: 5% !important;
+  }
+  }
+   }
+
+  .profilepic {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 5%;
+    margin-left: 7px;
+    overflow: hidden;
+    background-color: #111;
+  }
+  
+  .profilepic:hover .profilepic__content {
+    opacity: 1;
+  }
+  
+  .profilepic:hover .profilepic__image {
+    opacity: .5;
+  }
+  
+  .profilepic__image {
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+  }
+  
+  .profilepic__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+  
+  .profilepic__icon {
+    color: white;
+    padding-bottom: 8px;
+  }
+  
+  .fas {
+    font-size: 20px;
+  }
+  
+  .profilepic__text {
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 50%;
+    text-align: center;
+  }
+
+  .profilepic__image>.ms-Persona-coin{
+ div{
+ div{
+  border-radius: 5% !important;
+ }
+ }
+  }
+  
+  .sun-editor .se-resizing-back{
+    display: none !important;
+  }
+  .se-btn{
+    color: #545454 !important;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+    font-weight: 500 !important;
+  }
+  .ms-TextField .is-disabled {
+    border: var(--TextDisabled) !important;
+  }
+
+  .ms-Spinner-label {
+    font-weight: 600 !important;
+  }
+
+  //Akashdeep
+
+  .AuditTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .AuditTable,
+  .AuditTable th,
+  .AuditTable td {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  .AuditTable th {
+    background: var(--lightdarkBGTable);
+    color: var(--lightThemePivotTextBlack);
+    text-align: left;
+  }
+
+  .AuditTable tr:last-child {
+    border-bottom: 1px solid #bfbfbf;
+  }
+
+  .AuditTable tr:nth-child(even) {
+    border-top: 1px solid #bfbfbf;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #bfbfbf;
+  }
+
+  .borderNone {
+    .ms-TextField-wrapper {
+      .ms-TextField-fieldGroup {
+        input {
+          border: none !important;
+        }
+      }
+    }
+  }
+
+  .groupAndTeamTableStyle {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: auto;
+  }
+
+  .groupAndTeamTableStyle th {
+    width: 25%;
+    background: var(--lightdarkBGTable);
+    color: var(--lightThemePivotTextBlack);
+    text-align: left;
+  }
+
+  .groupAndTeamTableStyle,
+  .groupAndTeamTableStyle td,
+  .groupAndTeamTableStyle th {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .groupAndTeamTableStyle td {
+    text-align: left;
+  }
+
+  .groupAndTeamTableStyle tr {
+    vertical-align: baseline;
+  }
+
+  .TeamsOwnersList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .TeamsOwnersList:last-child {
+    border-bottom: 1px solid #bfbfbf;
+  }
+
+  .TeamsOwnersList:nth-child(odd) {
+    border-top: 1px solid #bfbfbf;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #bfbfbf;
+  }
+
+  .TeamsOwnersList:first-child {
+    border-top: none;
+  }
+
+  //Akashdeep
+  .ms-DatePicker {
+    .ms-TextField {
+      .ms-TextField-wrapper {
+        .ms-TextField-fieldGroup {
+          .ms-TextField-field:focus {
+            &::after {
+              content: unset !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .readOnlyTextField {
+    height: 30px !important;
+  }
+
+  .se-btn {
+    color: #545454 !important;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+    font-weight: 500 !important;
+  }
+
+  .quill {
+    border: 1px solid #ddd;
+  }
+
+  .quill .ql-toolbar {
+    display: contents !important;
+  }
+
+  .ms-Dropdown-callout {
+    max-height: 100px;
+    // overflow-y: scroll;
+    min-width: 5%;
+  }
+
+  .tw-text-center {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-link {
+    color: var(--lightdarkColor) !important;
+  }
+  .pivotCustomBGcolor > .ms-Pivot .is-selected[data-is-overflowing='true']{
+    display: unset !important;
+  }
+
+  // .pivotCustomBGcolor .linkIsSelected {
+  //   display: unset !important;
+  // }
+  .ms-ContextualMenu-item>.ms-Pivot-linkInMenu>.ms-Button-flexContainer>span>.HomeCountStyles {
+    color: #000 !important;
+  }
+
+  .ql-editing {
+    left: 10px !important;
+    z-index: 99;
+  }
+
+  .ms-propertysheet,
+  .ms-vb,
+  .ms-vb2 {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-GroupHeader-title {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-link {
+    color: var(--lightdarkColor) !important;
+  }
+
+  .ms-ContextualMenu-item>.ms-Pivot-linkInMenu>.ms-Button-flexContainer>span>.HomeCountStyles {
+    color: #000 !important;
+  }
+
+  .CustomCommandBarStyles {
+    .ms-CommandBarItem-link {
+      i {
+        color: var(--settingIconColor);
+      }
+
+      button :hover.ms-Button-menuIcon {
+        color: var(--lightdarkColor) !important;
+      }
+    }
+
+    .ms-CommandBarItem-link :hover {
+      // background-color: unset !important;
+
+      i {
+        background-color: unset !important;
+        // color: var(--lightdarkColor) !important;
+      }
+    }
+  }
+
+  .ms-Checkbox:not(.is-checked):hover .ms-Checkbox-checkmark {
+    display: none;
+  }
+
+  .ms-Button--default {
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .dropdownItem:hover {
+    .ms-Checkbox-checkbox>.ms-Checkbox-checkmark {
+      color: #fff !important;
+    }
+  }
+
+  .css-16uyfc2-control {
+    min-height: 32px !important;
+    border-radius: 2px !important;
+    background: var(--lightThemePanelBGSwitcher)!important;
+    color: var(--lightThemeTextColorBlack)!important;
+  }
+  .css-b8ldur-Input{
+    color: var(--lightThemeTextColorBlack)!important;
+  }
+
+  .css-26l3qy-menu {
+    z-index: 9 !important;
+  }
+  .ms-Persona-primaryText>.ms-TooltipHost {
+    pointer-events: none;
+  }
+
+  .ms-Persona-secondaryText>.ms-TooltipHost {
+    pointer-events: none;
+  }
+
+  .ms-ChoiceFieldLabel {
+    color: #000 !important;
+  }
+
+  .wideViewIcon>div {
+    .ms-Button--icon>.ms-Button-flexContainer>i {
+      color: var(--settingIconColor) !important;
+    }
+  }
+
+  .ms-DetailsRow-cell>i {
+    color: var(--settingIconColor) !important;
+  }
+
+  .CustomFormTextFieldDisabled {
+    color: red !important;
+  }
+
+  .ms-Dropdown-items>.ms-Checkbox.is-enabled>label {
+    .ms-Checkbox-checkbox {
+      background-color: #fff !important;
+    }
+  }
+
+  .ms-Dropdown-items>.ms-Checkbox.is-checked>label {
+    .ms-Checkbox-checkbox {
+      background-color: #fff !important;
+    }
+  }
+
+  .ms-TextField.is-disabled>.ms-TextField-wrapper {
+    label {
+      color: rgb(161, 159, 157) !important;
+    }
+
+    .ms-TextField-fieldGroup {
+      // border: var(--TextDisabled) !important;
+      border-radius: 2px !important;
+      background: rgb(255, 255, 255) !important;
+
+      input {
+        // border: var(--TextDisabled) !important;
+        background: var(--TextDisabled) !important;
+        color: rgb(161, 159, 157) !important;
+        // border: 1px solid #ddd !important;
+      }
+      textarea {
+        // border: var(--TextDisabled) !important;
+        background: var(--TextDisabled) !important;
+        color: rgb(161, 159, 157) !important;
+        // border: 1px solid #ddd !important;
+     }
+
+
+
+      .ms-TextField-field::placeholder {
+        color: rgb(161, 159, 157) !important;
+      }
+    }
+  }
+
+  .pagination_dev_static_global {
+    display: block;
+  }
+
+  .ms-GroupedList-group>.ms-GroupHeader--compact:hover {
+    background: var(--lightdarkHoverBG);
+  }
+
+  .Email>i {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .showHalf>.menuIcon>i {
+    color: var(--lightThemeSwitcherTextColor) !important;
+  }
+
+  .showFull>.menuIconFull>i {
+    color: var(--lightThemeSwitcherTextColor) !important;
+  }
+
+  .ms-DetailsRow-cell>a>i {
+    color: var(--settingIconColor) !important;
+  }
+
+  // .ms-Link>i{
+  //   color: var(--settingIconColor)!important;
+
+  // }
+  .SkypeCircleClock {
+    color: orange !important;
+  }
+
+  .react-time-picker__inputGroup {
+
+    .react-time-picker__inputGroup__hour,
+    .react-time-picker__inputGroup__divider,
+    .react-time-picker__inputGroup__leadingZero,
+    .react-time-picker__inputGroup__minute,
+    .react-time-picker__inputGroup__amPm {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-DatePicker-dayBackground:hover {
+    background-color: var(--lightdarkHoverBG) !important;
+  }
+
+  .ms-DatePicker-currentDecade,
+  .ms-DatePicker-yearOption {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-DatePicker-yearOption:hover {
+    background-color: var(--lightdarkHoverBG) !important;
+  }
+
+  .ms-DatePicker-prevDecade>i,
+  .ms-DatePicker-nextDecade>i {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-DatePicker-prevDecade:hover,
+  .ms-DatePicker-nextDecade:hover {
+    background-color: var(--lightdarkHoverBG) !important;
+  }
+
+  .ms-DatePicker-day--highlighted {
+    color: #000 !important;
+  }
+
+  #DeleteOnboardedUser>div>.ms-Button>.ms-Button-flexContainer>i {
+    color: var(--settingIconColor) !important;
+  }
+
+  // .ms-List-cell > .is-selected {
+  //   background: var(--lightdarkBGTable) !important;
+  // }
+  .ms-DetailsRow-cell>div {
+    div>.ms-Button--action>span>i {
+      color: var(--settingIconColor) !important;
+    }
+
+    div>.ms-Button--action>span>i {
+      color: var(--settingIconColor) !important;
+    }
+  }
+
+  ol>.ms-Breadcrumb-listItem>.ms-Breadcrumb-item>.ms-TooltipHost {
+    background: none;
+    color: var(--settingIconColor) !important;
+  }
+
+  .ql-snow .ql-picker.ql-font .ql-picker-label::before,
+  .ql-snow .ql-picker.ql-header .ql-picker-label::before {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  h4 {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .ms-Grid-col>.ms-Label>i {
+    color: var(--settingIconColor) !important;
+  }
+
+  .CustomCommandBarStylesforCalendar>i {
+    color: var(--settingIconColor) !important;
+  }
+
+  .ms-DetailsRow-cell>.ms-Link>i {
+    color: var(--settingIconColor) !important;
+    cursor: pointer;
+  }
+
+  .ms-DetailsRow-cell>.ms-Link>i[aria-disabled="true"] {
+    color: rgb(161, 159, 157) !important;
+    cursor: pointer;
+  }
+
+
+  //for select//
+  .css-3w2yfm-ValueContainer {
+    margin-top: -7px !important;
+  }
+
+  .css-1nmdiq5-menu {
+    z-index: 9 !important;
+  }
+
+  .css-1u9des2-indicatorSeparator {
+    width: 0px !important;
+  }
+
+  .css-b62m3t-container {
+    min-height: 32px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  .css-14jk2my-container {
+    min-height: 32px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  .css-1jqq78o-placeholder {
+    color: var(--lightThemeTextColorBlack) !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .css-13cymwt-control,
+  .css-1fhf3k1-control {
+    height: 32px !important;
+    min-height: 32px !important;
+    // border-color:  hsl(40deg 1% 45%);
+    border-color: #d3d1ce !important;
+    border-radius: 2px !important;
+
+    cursor: pointer;
+  }
+
+  .css-14jrqof-control {
+    height: 32px !important;
+    min-height: 32px !important;
+    border-color: #d3d1ce !important;
+    border-radius: 2px !important;
+    cursor: pointer;
+  }
+
+  .css-1fdsijx-ValueContainer,
+  .css-g1d714-ValueContainer {
+    padding: 0px 5px !important;
+    // margin-bottom: 5px;
+  }
+
+  .css-1hb7zxy-IndicatorsContainer {
+    padding: 0px !important;
+  }
+
+  .css-yk16xz-control {
+    min-height: 32px !important;
+    // border-color:  hsl(40deg 1% 45%);
+    border-color: #d3d1ce !important;
+    border-radius: 2px !important;
+    cursor: pointer;
+    background: var(--lightThemePanelBGSwitcher) !important;
+  
+  }
+
+  .css-tlfecz-indicatorContainer,
+  .css-1hb7zxy-IndicatorsContainer {
+    padding: 0px !important;
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    display: none !important;
+  }
+
+  .css-1pahdxg-control {
+    min-height: 32px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  .css-g1d714-ValueContainer {
+    padding: 0px 5px !important;
+  }
+
+  .css-1gtu0rj-indicatorContainer {
+    padding: 0px !important;
+  }
+.css-4ljt47-MenuList{
+  background: var(--lightThemeBGcolorWhite) !important;
+}
+.css-4ljt47-MenuList>div{
+  background-color: var(--lightThemeBGcolorWhite)!important;
+    color: var(--lightThemeTextColorBlack)!important
+    
+}
+.css-4ljt47-MenuList>div:hover{
+  color: var(--lightThemeTextColorBlack)!important;
+  background-color: var(--lightdarkBGTable)!important;
+    
+}
+.css-1uccc91-singleValue{
+  color: var(--lightThemeTextColorBlack)!important;
+}
+  .css-1wa3eu0-placeholder {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-PickerItem-removeButton:hover {
+    background: var(--lightdarkHoverBG) !important;
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-PeoplePicker-personaContent:hover {
+    background: var(--lightThemeHoverBGColor);
+    color: var(--lightThemeTextColorBlack) !important;
+
+    .ms-Persona-primaryText {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-Persona-secondaryText {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-Suggestions-item:hover {
+    background-color: var(--lightThemeHoverBGColor) !important;
+  }
+
+  .ms-Suggestions-item>.is-suggested {
+    background: var(--settingBgColor) !important;
+
+    .ms-Persona-primaryText {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-Persona-secondaryText {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-DatePicker-table {
+    tr td:hover {
+      background-color: var(--lightdarkHoverBG) !important;
+    }
+
+    tr td:active {
+      background-color: var(--lightThemeHoverBGColor) !important;
+    }
+
+    tr>.ms-DatePicker-day--highlighted>button {
+      color: #000 !important;
+    }
+  }
+
+  .ms-Toggle-background {
+    border: 1px solid rgb(96, 94, 92) !important;
+  }
+
+  // people picker
+  .ms-BasePicker {
+    .ms-BasePicker-text {
+      background-color: var(--lightThemeBGcolorWhite);
+    }
+
+    .ms-PickerPersona-container {
+      background-color: var(--lightThemePersonaNameColor);
+    }
+
+    .itemsWrapper {
+      border: 1px solid var(--lightThemeBorderColor);
+      border-radius: 10px;
+    }
+  }
+
+  .ms-BasePicker .ms-PickerPersona-container {
+    border: 1px solid;
+  }
+
+  .ms-PeoplePicker-personaContent {
+    .ms-Persona-primaryText {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-Persona-secondaryText {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-Suggestions-none {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-BasePicker {
+    .ms-BasePicker-text {
+      .ms-BasePicker-input {
+        color: var(--lightThemeTextColorBlack) !important;
+      }
+    }
+  }
+
+  // .ms-TooltipHost button,
+  // .ms-TooltipHost i {
+  //   color: var(--lightThemePivotTextBlack) !important;
+  // }
+
+  // .ms-TooltipHost button,
+  // :hover.ms-TooltipHost i {
+  //   color: var(--lightThemeTextColorBlack) !important;
+  // }
+
+  .ms-Checkbox-checkbox>.ms-Checkbox-checkmark {
+    color: var(--lightdarkChange) !important;
+  }
+
+  .ms-DatePicker {
+    .ms-DatePicker-monthAndYear {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    // Date picker
+    .ms-DatePicker-wrap {
+      background-color: var(--lightThemeBGcolorWhite) !important;
+    }
+
+    .ms-DatePicker-day-button {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-DatePicker-weekday {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-DatePicker-monthOption {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-DatePicker-monthOption:hover {
+      background-color: var(--lightThemeHoverBGColor) !important;
+    }
+
+    .ms-DatePicker-currentYear,
+    .ms-DatePicker-event {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    // Month Sorting // Month Sorting
+    .ms-DatePicker-prevMonth,
+    .ms-DatePicker-nextMonth,
+    .ms-DatePicker-prevYear,
+    .ms-DatePicker-nextYear {
+
+      &:hover,
+      &:active {
+        background-color: var(--lightThemeHoverBGColor) !important;
+      }
+
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    // date focus
+    .dayIsHighlighted,
+    .pickerIsFocused {
+      background-color: var(--lightThemeBGcolorWhite) !important;
+    }
+
+    // Pending
+    // hover
+    .ms-DatePicker-table {
+
+      .dayIsFocused,
+      .dayIsUnfocused {
+
+        &:active,
+        &:hover {
+          background-color: var(--lightThemeHoverBGColor) !important;
+        }
+
+        .ms-DatePicker-day:hover {
+          background-color: var(--lightThemeHoverBGColor) !important;
+        }
+
+        .ms-DatePicker-day:active {
+          background-color: var(--lightThemeHoverBGColor) !important;
+        }
+      }
+
+      .HomeCountStyles {
+        font-size: 20px;
+        // color: #fff;
+        font-weight: 700;
+        position: relative;
+        top: -3px;
+      }
+
+      tr .dayIsFocused:hover,
+      .dayIsUnfocused:hover {
+        background-color: var(--lightThemeHoverBGColor) !important;
+      }
+    }
+
+    .ms-DatePicker-monthOption {
+
+      &:active,
+      &hover {
+        background-color: var(--lightThemeHoverBGColor) !important;
+      }
+    }
+  }
+
+  li {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-layer {
+    color: #ffff;
+    border: #000;
+  }
+
+  .ms-SearchBox {
+    background-color: var(--lightThemeBGcolorWhite);
+  }
+
+  // Search
+  .ms-SearchBox {
+    .ms-SearchBox-icon {
+      // color: var(--lightThemeTextColorBlack) !important;
+      // conflict
+      color: var(--lightThemePivotTextBlack) !important;
+    }
+  }
+
+  .ms-SearchBox {
+    .ms-SearchBox-iconContainer {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+
+    .ms-SearchBox-field {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-SearchBox i {
+    color: var(--textIconColor) !important;
+  }
+
+  .ms-Panel-content {
+    background-color: var(--lightThemePanelBGSwitcher) !important;
+  }
+
+  .ms-Panel-content .ms-FocusZone .ms-Button {
+    color: var(--lightThemeTextColorBlack) !important;
+    background-color: transparent;
+  }
+
+  // Dropdown LIST
+  .ms-Dropdown-title {
+    background-color: var(--lightThemeBGcolorWhite);
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .ms-Callout-main {
+    background-color: var(--lightThemeBGcolorWhite);
+  }
+
+  .ms-Dropdown-optionText {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .is-row-header {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .ms-DetailsRow-fields:hover .is-row-header {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .is-row-header,
+  .ms-Dropdown-optionText {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .ms-Dropdown-item:active {
+    background: var(--lightThemePivotTextBlack) !important;
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-Dropdown-item:focus {
+    background: var(--lightThemeBGcolorWhite) !important;
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .dropdownItemSelected:hover:focus {
+    background: var(--lightThemeBGcolorWhite) !important;
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-Dropdown-items>.dropdownItemSelected {
+    background: var(--lightThemePivotTextBlack) !important;
+  }
+
+  .ms-Dropdown-item:hover {
+    background-color: var(--lightdarkBGTable) !important;
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  // .ms-Dropdown-callout {
+  //   .ms-Button {
+  //     background: var(--lightThemeBGcolorWhite) !important;
+  //     color: var(--lightThemeTextColorBlack) !important;
+  //   }
+  // }
+  .ms-Button .ms-Button--action .ms-Button--command .ms-Dropdown-item .dropdownItem:active {
+    background-color: var(--lightThemePivotTextBlack);
+  }
+
+  .ms-Button .ms-Button--action .ms-Button--command .ms-Dropdown-item .dropdownItem:focus {
+    background-color: var(--lightThemeBGcolorWhite);
+  }
+
+  .ms-Button .ms-Dropdown-item {
+    &:active:focus {
+      background-color: var(--lightThemeBGcolorWhite);
+    }
+  }
+
+  .ms-Button .ms-Dropdown-item {
+    &:active {
+      background-color: var(--lightThemePivotTextBlack) !important;
+    }
+  }
+
+  .ms-DetailsRow-fields .ms-Dropdown:hover .ms-Dropdown-title {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-DetailsRow-fields {
+    .ms-Dropdown:focus {
+      .ms-Dropdown-title {
+        color: var(--lightThemeTextColorBlack) !important;
+      }
+    }
+  }
+
+  .ms-Dropdown-item {
+    background-color: var(--lightThemeBGcolorWhite) !important;
+    color: var(--lightThemeTextColorBlack) !important;
+
+    &:hover {
+      color: var(--lightThemeTextColorBlack) !important;
+      background-color: var(--lightdarkBGTable) !important;
+    }
+  }
+
+  .ms-Dropdown-container {
+    .ms-Dropdown {
+
+      &:hover,
+      &:active,
+      &:focus,
+      .ms-Dropdown-titleIsPlaceHolder,
+      .ms-Dropdown-title {
+        color: var(--lightThemeTextColorBlack) !important;
+      }
+    }
+  }
+
+  .ms-Dropdown-item .dropdownItemSelected:focus {
+    background: var(--lightdarkBG !important);
+  }
+
+  .ms-BasePicker {
+    .ms-Persona-details {
+      .ms-Persona-primaryText {
+        color: var(--lightThemeTextColorBlack) !important;
+      }
+
+      .ms-Button {
+        color: var(--lightThemeTextColorBlack) !important;
+      }
+    }
+  }
+
+  .ms-DatePicker {
+    .ms-TextField {
+      .ms-TextField-wrapper {
+        .ms-TextField-fieldGroup {
+          .ms-TextField-field::placeholder {
+            color: var(--lightThemeTextColorBlack) !important;
+          }
+        }
+      }
+    }
+  }
+
+  .ms-DatePicker {
+
+    .ms-TextField-field,
+    .ms-DatePicker-event--without-label {
+      color: var(--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-PeoplePicker {
+    color: var(--lightThemeTextColorBlack) !important;
+    background-color: var(--lightThemeBGcolorWhite) !important;
+  }
+
+  .ms-BasePicker-text>input {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-TextField-fieldGroup ::before {
+    border-color: #d3d1ce !important;
+    background-color: var(--lightThemeBGcolorWhite);
+  }
+
+  .ms-TextField-fieldGroup ::after {
+    border-color: #d3d1ce !important;
+    background-color: var(--lightThemeBGcolorWhite);
+  }
+
+  .ms-TextField {
+    .ms-TextField-field {
+      color: var(--lightThemeTextColorBlack) !important;
+      background-color: var(--lightThemeBGcolorWhite) !important;
+    }
+  }
+
+  .ms-TextField-field::placeholder {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-BasePicker-input::placeholder {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-SearchBox-field::placeholder {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-Dropdown-title {
+    background-color: var(--lightThemeBGcolorWhite);
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .ms-Callout-main {
+    background-color: var(--lightThemeBGcolorWhite);
+  }
+
+  .ms-OverflowSet-item .ms-Button--commandBar {
+    span>i:hover>span:hover {
+      color: (--lightThemeTextColorBlack) !important;
+    }
+  }
+
+  .ms-Dropdown-optionText {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .ms-TextField .ms-TextField-field {
+    background-color: var(--lightThemeBGcolorWhite) !important;
+  }
+
+  .ms-Panel-closeButton>span>i {
+    color: var(--lightThemeSwitcherTextColor) !important;
+  }
+
+  // .ms-Viewport  div{
+  //   color: var(--lightThemeTextColorBlack) !important;
+  // }
+
+  .CustomCommandBarStyles>.ms-TooltipHost {
+    background-color: #f5f5f5;
+  }
+
+  // .ms-Button-flexContainer {
+  //   i{
+  //     color: var(--lightThemeTextColorBlack) !important;
+  //   }
+  // }
+
+  label {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-Checkbox-text {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-SearchBox .ms-SearchBox-field {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+
+  .ms-DetailsHeader-cellTitle {
+    color: var(--lightThemePivotTextBlack) !important;
+
+    i {
+      color: var(--lightThemePivotTextBlack) !important;
+    }
+  }
+
+  .ms-DetailsRow-cell {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+  .DynamicColumn.ms-DetailsRow-cell{
+text-align: right !important;
+  }
+
+  .ms-pivot .ms-FocusZone .ms-Button:hover {
+    background-color: var(--lightThemeHoverBGColor) !important;
+  }
+
+  .ms-Panel-content .ms-FocusZone .ms-Button:hover {
+    color: var(--lightThemeTextColorBlack) !important;
+    // background-color: var(--lightThemeActionButtonBGBlack);
+  }
+
+  .ms-List-page .ms-List-cell .ms-FocusZone:hover {
+    color: var(--lightThemeTextColorBlack) !important;
+    background-color: var(--lightThemeHoverBGColor) !important;
+  }
+
+  .ms-DetailsHeader-cell {
+    white-space: "normal";
+    text-overflow: "clip";
+    line-height: "normal";
+  }
+
+  .ms-DetailsHeader-cellTitle {
+    height: 100%;
+    align-items: "center";
+  }
+
+  .reactEasyCrop_Container {
+    height: 260px !important;
+    width: 260px !important;
+  }
+
+  .PersonaStylePre {
+    .ms-Persona-coin {
+      .ms-Persona-imageArea {
+        margin-top: 15px;
+        margin-left: 30px;
+      }
+    }
+
+    .ms-Persona-details {
+      text-align: center;
+      padding: 0px;
+
+      .ms-Persona-primaryText {
+        margin-top: 10px;
+        color: var(--lightdarkChange) !important;
+        font-weight: 500;
+      }
+
+      .ms-Persona-secondaryText {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .PreboardingCustomPivot>.ms-Pivot {
+    width: 96%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .ms-Button-icon .icon {
+    columns: var(--lightdarkChange) !important;
+  }
+
+  //--------------React Quill Global Styles--------------------------------
+  .richTextToolbox .ql-toolbar {
+    width: auto !important;
+  }
+
+  .richTextToolbox {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .richTextToolboxAddNew {
+    margin-top: 0px;
+  }
+
+  .ql-editor,
+  .ql-snow .ql-editor {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .ql-toolbar.ql-snow {
+    padding: 0;
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system,
+      BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    border: none;
+    margin-bottom: -4px;
+    z-index: 3;
+    animation-name: ms-fadeIn, ms-slideUpIn10;
+    animation-duration: 167ms;
+    animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+    animation-fill-mode: both;
+    transition: all 367ms cubic-bezier(0.1, 0.9, 0.2, 1);
+  }
+
+  // .ql-toolbar {
+  //   display: block !important;
+  // }
+
+  .ql-active .ql-toolbar {
+    position: static !important;
+    box-shadow: 0 0 0 0 #ffffff !important;
+  }
+
+  .ql-editor blockquote,
+  .ql-editor div,
+  .ql-editor h2,
+  .ql-editor h3,
+  .ql-editor h4,
+  .ql-editor ol,
+  .ql-editor p,
+  .ql-editor ul,
+  .ql-snow .ql-editor blockquote,
+  .ql-snow .ql-editor div,
+  .ql-snow .ql-editor h2,
+  .ql-snow .ql-editor h3,
+  .ql-snow .ql-editor h4,
+  .ql-snow .ql-editor ol,
+  .ql-snow .ql-editor p,
+  .ql-snow .ql-editor ul {
+    -webkit-font-smoothing: antialiased;
+    color: #323130;
+    line-height: 1.3;
+    margin: 0px 0 0px !important;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+
+  .ql-editor div,
+  .ql-editor ol,
+  .ql-editor p,
+  .ql-editor ul {
+    font-size: 14px !important;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+
+  .ql-editor,
+  .ql-snow .ql-editor {
+    font-size: 14px !important;
+  }
+
+  .ql-toolbar .ms-TooltipHost {
+    color: #000000 !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-title,
+  .ql-snow.ql-toolbar button {
+    background-color: #f5f5f5 !important;
+    color: #000000 !important;
+    border: none !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-caretDownWrapper i {
+    color: #000000 !important;
+    font-family: "Fluent MDL2 Hybrid Icons" !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-item {
+    background-color: #e9e9e9 !important;
+    color: #000000 !important;
+  }
+
+  // .ql-toolbar .ms-Dropdown-title,
+  // .ql-snow.ql-toolbar button {
+  //   background-color: #e9e9e9 !important;
+  // }
+
+  @media screen and (max-width: 768px) {
+    .richTextToolbox .ql-toolbar {
+      display: none !important;
+    }
+
+    .richTextToolboxAddNew .ql-toolbar {
+      display: none !important;
+    }
+  }
+
+  .richtextmailbox .ql-editor {
+    border: 1px solid transparent !important;
+  }
+
+  .richtextmailbox .ql-editor:hover {
+    background-color: rgb(243, 242, 241) !important;
+  }
+
+  .css-365 {
+    height: 32px !important;
+    margin-left: 0px;
+  }
+
+  .ms-DetailsRow-cell {
+    font-size: 14px !important;
+  }
+  .DynamicColumn.ms-DetailsRow-cell{
+    text-align: right !important;
+      }
+
+  //Docu Sign Access Token generated successfully! Sweet alert Custom Style
+
+  //Start
+  .iconForDocum {
+    position: absolute !important;
+    top: -80px;
+    left: 120px;
+    background: #4bb543;
+
+    .swal2-success-line {
+      background-color: #fff !important;
+    }
+
+    .swal2-success-circular-line-left {
+      display: none;
+    }
+
+    .swal2-success-circular-line-right {
+      display: none;
+    }
+
+    .swal2-success-fix {
+      display: none;
+    }
+  }
+
+  .iconForDocum.swal2-success [class^="swal2-success-line"] {
+    background-color: #fff !important;
+  }
+
+  //Global Css for Sweet Alret
+  //Icon for sync style
+  .iconForSync.swal2-icon.swal2-warning {
+    color: #f9a825 !important;
+    border-color: #f9a825 !important;
+  }
+
+  //Start
+  .swal2-popup {
+    border-radius: 0px !important;
+  }
+
+  .swal2-icon.swal2-warning, .swal2-icon.swal2-info{
+    border-color: #f9a825 !important;
+    color: #f9a825 !important;
+  }
+
+  .swal2-icon.swal2-success {
+    border-color: #338703 !important;
+    color: #338703 !important;
+  }
+
+  .swal2-icon.swal2-success .swal2-success-ring {
+    border: 0.25em solid #338703 !important;
+    // border: 2px solid rgb(59 158 2 94%) !important;
+  }
+
+  .swal2-icon.swal2-success [class^="swal2-success-line"] {
+    background-color: #3e9b0a !important;
+  }
+
+  .swal2-html-container {
+    color: var(--color-body-contentColor) !important;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system,
+      BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  .swal2-popup .swal2-modal .swal2-icon-warning .swal2-show {
+    .swal2-popup {
+      display: none;
+      position: relative;
+      box-sizing: border-box;
+      grid-template-columns: minmax(0, 100%);
+      width: 32em;
+      max-width: 100%;
+      padding: 0 0 1.25em;
+      border: none;
+      border-radius: 15px;
+      background: #fff;
+      color: #545454;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+  }
+
+  .swal2-styled.swal2-confirm {
+    background-color: var(--lightdarkBGGray) !important;
+    border: var(--lightdarkBGGray) !important;
+    min-width: 90px !important;
+    max-width: 10px !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    color: var(--lightdarkColor) !important;
+
+    &:focus {
+      box-shadow: 0 0 0 1px rgb(138, 136, 134) !important;
+    }
+  }
+
+  .swal2-styled {
+    border-radius: 0px !important;
+  }
+
+  .swal2-styled.swal2-cancel {
+    // background-color:  !important;
+    border: 1px solid rgb(138, 136, 134) !important;
+    background-color: #ffffff !important;
+    color: var(--color-body-contentColor) !important;
+    border-radius: -0.75em !important;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgb(138, 136, 134) !important;
+    }
+  }
+
+  //End
+  .dropdownItem:hover {
+    color: var(--lightdarkChange) !important;
+    background: rgb(243, 242, 241) !important;
+  }
+
+  .options:hover {
+    color: var(--lightdarkChange) !important;
+    background: rgb(243, 242, 241) !important;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-linkContent>span {
+    margin-top: -2px !important;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-linkContent {
+    span {
+      margin-top: -2px !important;
+    }
+
+    span {
+      color: var(--lightdarkColor);
+    }
+  }
+
+  // .ms-DetailsHeader-checkTooltip{
+  // margin-top: -34px;
+  // .ms-check{
+  //   top: -10px;
+  // }
+
+  // }
+
+  //  .ms-DetailsHeader-check{
+  //   margin-top: -36px;
+  //  }
+  .ms-DetailsRow-check {
+    .ms-Check {
+      .ms-Check-circle {
+        border-radius: 10px;
+        border: "1px solid #333 !important";
+        background-color: #fff !important;
+        color: #333;
+      }
+
+      .ms-Check-check {
+        top: 1px !important;
+        color: var(--lightdarkChange);
+      }
+    }
+  }
+
+  .ms-Button--commandBar .ms-Button-flexContainer .ms-Button-menuIcon {
+    color: var(--lightdarkChange) !important;
+  }
+
+  .ms-ChoiceFieldGroup-flexContainer {
+    display: inline !important;
+  }
+
+  // .ms-Panel-content{
+  //   // background-color: #f5f5f5;
+  //   background: var(--lightThemeBGcolorWhite);
+  // }
+  .ms-Grid {
+    padding: 0px !important;
+  }
+
+  .ms-Panel-header {
+    padding-left: 12px;
+    padding-right: 24px;
+    align-self: flex-start;
+    flex-grow: 1;
+  }
+
+  .ms-DetailsRow-fields {
+    border-bottom: 1px solid #fbfbfb;
+    // background-color: #f9f9f9;
+    color: #333;
+    align-items: center;
+  }
+
+  .react-time-picker__clock-button {
+    display: none !important;
+  }
+
+  .react-time-picker__clock-button:enabled {
+    display: none !important;
+  }
+
+  .react-time-picker {
+    width: 100%;
+  }
+
+  .ms-Checkbox-checkbox .checkbox {
+    background-color: #fff !important;
+  }
+
+  .ms-Checkbox-checkbox {
+    border: 1px solid #c2bfbb !important;
+    // border: 1px solid #d3d1ce !important;
+  }
+
+  .ms-PeoplePicker {
+    background-color: #fff;
+  }
+
+  .ms-DetailsHeader-cell:hover {
+    color: unset;
+    background-color: unset !important;
+  }
+
+  .react-time-picker,
+  .react-time-picker *,
+  .react-time-picker :after,
+  .react-time-picker :before {
+    box-sizing: border-box;
+    border-color: #d3d1ce !important;
+    height: 30px;
+  }
+
+  .ms-Icon--Calendar,
+  .ms-Icon--ViewList {
+    font-size: 20px;
+    color: var(--lightdarkBG);
+    cursor: pointer;
+    margin-top: 16px;
+  }
+
+  //For FullCalendar Style
+  .fc .fc-button:focus {
+    box-shadow: none !important;
+  }
+
+  .fc .fc-button {
+    font-weight: normal !important;
+  }
+
+  .fc .fc-button-primary {
+    // background-color: var(--lightdarkBG) !important;
+    // color: var(--lightdarkColor) !important;
+    background-color: rgb(244, 244, 244) !important;
+    color: var(--lightdarkChange) !important;
+    // border-color: var(--lightdarkBG) !important;
+    border-color: rgb(244, 244, 244) !important;
+    // opacity: 0.65 !important;
+  }
+
+  .fc .fc-button-primary:hover {
+    // color: var(--lightdarkColor) !important;
+    // background-color: var(--lightdarkHoverBG) !important;
+    background-color: rgb(244, 244, 244) !important;
+    color: var(--lightdarkChange) !important;
+  }
+
+  .fc .fc-button-primary:disabled {
+    // color: var(--lightdarkColor) !important;
+    // background-color: var(--lightdarkBG) !important;
+    background-color: rgb(244, 244, 244) !important;
+    color: var(--lightdarkChange) !important;
+  }
+
+  .fc .fc-button-primary:focus {
+    box-shadow: none !important;
+  }
+
+  .fc-col-header-cell {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .fc-day-future>.fc-daygrid-day-frame>.fc-daygrid-day-top {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .fc-day-past>.fc-daygrid-day-frame>.fc-daygrid-day-top {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .fc .fc-button-primary:not(:disabled):active,
+  .fc .fc-button-primary:not(:disabled).fc-button-active {
+    // color: var(--lightdarkColor) !important;
+    // background-color: var(--lightdarkBG) !important;
+    background-color: rgb(244, 244, 244) !important;
+    color: var(--lightdarkChange) !important;
+  }
+
+  .fc .fc-button-primary:not(:disabled):active:focus,
+  .fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+    box-shadow: none !important;
+  }
+
+  .ms-Dropdown-callout {
+    max-height: 100px;
+  }
+
+  .fc-h-event .fc-event-main {
+    color: var(--lightdarkColor) !important;
+    background-color: var(--lightdarkBGTable) !important;
+    border-color: var(--lightdarkBGTable) !important;
+    font-weight: 600 !important;
+  }
+
+  .fc-toolbar-title {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .fc .fc-daygrid-day.fc-day-today {
+    // background-color: var(--lightdarkBGTable) !important;
+    background-color: rgb(244, 244, 244) !important;
+    color: var(--lightdarkChange) !important;
+  }
+
+  .fc-timegrid-body {
+    background-color: var(--lightThemePanelBGSwitcher) !important;
+  }
+
+  .fc .fc-timegrid-slot-label {
+    background-color: #fff;
+  }
+
+  .fc .fc-daygrid-day-frame {
+    cursor: pointer;
+  }
+
+  .fc .fc-timegrid-axis-cushion {
+    color: var(--lightThemeTextColorBlack);
+  }
+
+  .fc .fc-button:disabled {
+    opacity: 1 !important;
+  }
+
+  //  End Of Calendar part style
+
+  .CustomCommandBarStylesforCalendar {
+    color: var(--lightdarkColor);
+    height: 32px;
+    justify-content: flex-start;
+    padding: 0px 6px;
+  }
+
+  .ms-Panel-commands {
+    padding-top: 0px !important;
+  }
+
+  .ms-Panel-contentInner {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background: var(--lightThemePanelBGSwitcher) !important;
+  }
+
+  .checkbox {
+    height: 30px;
+    width: 30px;
+  }
+
+  .ms-Panel-scrollableContent {
+    overflow-y: visible !important;
+  }
+
+  .ms-Panel-content {
+    height: auto !important;
+  }
+
+  .ms-Panel-scrollableContent {
+    background-color: var(--lightThemePanelBGSwitcher) !important;
+  }
+
+  .ms-Panel-content,
+  .ms-Panel-scrollableContent {
+    padding-top: 0px !important;
+    height: 99%;
+  }
+
+  //start
+  .livePersonaCard {
+    color: inherit;
+
+    .noCoin {
+      :global(.ms-Persona) {
+        :global(.ms-Persona-coin) {
+          display: none;
+        }
+
+        :global(.ms-Persona-details) {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  .css-yk16xz-control {
+    min-height: 32px !important;
+    // border-color:  hsl(40deg 1% 45%);
+    border-color: #d3d1ce !important;
+    border-radius: 2px !important;
+    cursor: pointer;
+  }
+
+  .css-tlfecz-indicatorContainer {
+    padding: 0px !important;
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    display: none !important;
+  }
+
+  .css-1pahdxg-control {
+    min-height: 32px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  .css-g1d714-ValueContainer {
+    padding: 0px 5px !important;
+  }
+
+  .css-1gtu0rj-indicatorContainer {
+    padding: 0px !important;
+  }
+
+  .css-1wa3eu0-placeholder {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ms-Persona-primaryText,
+  .ms-Persona-secondaryText {
+    line-height: 20px;
+  }
+
+  .ms-Persona-presence {
+    z-index: 2;
+    border-color: #fff;
+  }
+
+  //end
+  .ms-TextField-fieldGroup {
+    border-color: #d3d1ce !important;
+  }
+
+  .ms-BasePicker-text {
+    border: 1px solid #d3d1ce !important;
+  }
+
+  .ms-Button.root:hover {
+    background: none !important;
+  }
+
+  .ms-Button.ms-Button--commandBar.ms-CommandBarItem-link.root {
+    background: none !important;
+  }
+
+  //  .ms-CommandBar{
+  //   background-color: var(--textIconColor);
+  //  }
+
+  .ms-ContextualMenu-list {
+    background-color: var(--lightThemeBGcolorWhite) !important;
+  }
+
+  .ms-Pivot-text text {
+    color: var(--lightdarkBGGray);
+  }
+
+  .ms-Pivot-linkContent:first-child {
+    color: var(--lightThemePivotTextBlack);
+  }
+
+  .ms-Button {
+    .ms-Pivot-linkInMenu .linkInMenu:hover {
+      background-color: black;
+    }
+  }
+
+  .ms-ContextualMenu-item .ms-Button :hover {
+    background-color: rgb(243, 242, 241);
+
+    .ms-Pivot-linkContent:first-child {
+      color: var(--lightdarkBGGray);
+    }
+
+    .span {
+      color: #000;
+    }
+  }
+
+  // message bar styles starts here
+  .ms-MessageBar {
+    height: 33px;
+    justify-content: center;
+  }
+
+  .ms-MessageBar-dismissal {
+    height: 18px;
+    top: 6px;
+  }
+
+  .ms-MessageBar-dismissSingleLine {
+    display: block;
+    position: absolute;
+    right: 2px;
+  }
+
+  .ms-MessageBar-dismissalSingleLine {
+    position: relative;
+  }
+
+  .ms-MessageBar-text {
+    justify-content: center;
+    margin: 6px;
+  }
+
+  .ms-MessageBar-innerText span a {
+    font-weight: 600;
+    color: #323130;
+    text-decoration: underline;
+    line-height: 20px;
+    padding-left: 0px;
+  }
+
+  .ms-MessageBar-innerText span {
+    font-weight: 600;
+    color: #323130;
+    text-decoration: none;
+    line-height: 20px;
+  }
+
+  .ms-MessageBar-icon {
+    margin: 7px 0px;
+    line-height: 20px;
+  }
+
+  .ms-MessageBar-content {
+    flex: 0 1 0%;
+  }
+
+  // message bar styles ends here
+  .ql-snow,
+  .ql-snow * {
+    color: #000 !important;
+  }
+
+  .ql-editor {
+    background-color: #ffff !important;
+  }
+
+  // .pivotCustomBGcolor2{
+  //   display: none;
+  // }
+  .pivotCustomBGcolor .ms-Pivot-count {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .ms-SearchBox {
+    border: 1px solid #d3d1ce !important;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot {
+    // background-color: var(--lightdarkBGGray);
+    // margin-left: -10px;
+    width: 100%;
+    margin-left: 2px;
+    height: 40px;
+    margin-top: 0px;
+    // overflow: unset !important;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-overflowMenuButton {
+    color: var(--lightdarkColor);
+    height: 44px;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-overflowMenuButton>span>i {
+    position: relative;
+    top: -3px;
+    // visibility: visible;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-link {
+    margin-right: 0px;
+    background-color: var(--lightdarkBGGray);
+  }
+
+  .pivotCustomBGcolor2>.ms-Pivot .ms-Pivot-link {
+    // margin-right: 0px;
+    display: none;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-linkContent {
+    color: var(--lightdarkColor);
+    font-size: 14px;
+    // margin-bottom: 11px;
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .ms-Pivot-link:hover {
+    background-color: var(--lightdarkHoverBG);
+  }
+
+  .pivotCustomBGcolor>.ms-Pivot .is-selected {
+    background-color: var(--lightdarkBG);
+    // [data-is-overflowing="true"] {
+    //   display: unset !important;
+    // }
+  }
+
+  // ----custom styles for commandbar buttons start here-----
+  .CustomCommandBarStyles .ms-Button-flexContainer {
+    // color: var(--lightdarkColor);
+    background-color: var(--lightdarkBGTable) !important;
+    color: var(--lightdarkChange) !important;
+
+    // background-color: var(--lightdarkChange) !important;
+    height: 30px;
+    justify-content: flex-start;
+    // margin-right: 5px;
+    padding: 0px 6px;
+  }
+
+  .CustomCommandBarStyles .ms-Button--commandBar {
+    background-color: whitesmoke;
+    // background-color:var(--lightdarkBGTable) !important;
+    // background-color: rgb(244,244,244) !important;
+    padding: 0px;
+  }
+
+  .CustomCommandBarStyles {
+    // background-color: rgb(244,244,244) !important;
+    // color:var(--lightdarkColor) !important ;
+    // background-color: var(--lightdarkBGGray) !important;
+    background-color: var(--lightdarkBGTable) !important;
+    color: var(--lightdarkChange) !important;
+    // background-color: var(--lightdarkChange) !important;
+  }
+
+  .CustomCommandBarStyles .ms-CommandBar {
+    background-color: transparent;
+  }
+
+  .CustomCommandBarStyles .ms-Button-flexContainer:hover {
+    .ms-Button-icon {
+      color: var(--settingIconColor) !important;
+    }
+
+    background-color: var(--lightdarkHoverBG);
+    height: 30px;
+    color: var(--settingIconColor) !important;
+    // background-color: rgb(243, 242, 241);
+  }
+
+  .CustomCommandBarStyles .ms-Button .ms-Button--commandBar:active {
+    background-color: var(--lightdarkBG);
+    // background-color: var(--lightdarkBGGray) ;
+  }
+
+  .CustomCommandBarStyles .ms-Button-flexContainer .ms-Button-icon {
+    // color: var(--lightdarkColor) ;
+    color: var(--lightdarkChange) !important;
+  }
+
+  .IconStyles .ms-Button-flexContainer .ms-Button-icon {
+    color: #fff;
+    background-color: none;
+  }
+
+  .SaveIconStyles .root:hover {
+    background-color: #bdda9b !important;
+  }
+
+  // ----custom styles for commandbar buttons end here-----
+  .ms-Button .ms-Button--icon .root:hover {
+    color: var(--lightdarkBGGray);
+    background-color: none;
+  }
+
+  .ms-Button .ms-Button--icon .root {
+    // color: var(--lightdarkBGGray);
+    color: var(--lightdarkChange) !important;
+  }
+
+  // custom styles for searchbox icon
+  // .ms-SearchBox-iconContainer{
+  //   color: var(--lightdarkColor);
+  // }
+
+  .pivotCustomBGcolor>.ms-Pivot .is-selected::before {
+    height: 0 !important;
+  }
+
+  .ms-Dropdown-title {
+    border-color: #d3d1ce !important;
+    // border-color: rgb(96, 94, 92)!important;
+  }
+
+  .ms-DetailsHeader-cell {
+    white-space: "normal";
+    text-overflow: "clip";
+    line-height: "normal";
+  }
+
+  .ms-DetailsHeader {
+    border-bottom: 2px solid rgb(199, 188, 188);
+  }
+
+  .ms-DetailsHeader1 {
+    border-bottom: 2px solid rgb(199, 188, 188);
+    padding-top: 0px;
+  }
+
+  .ms-DetailsRow {
+    border-bottom: 1px solid rgb(219, 211, 211);
+    align-items: center;
+  }
+
+  .ms-DetailsHeader-cellTitle {
+    height: 100%;
+    align-items: "center";
+  }
+
+  // .mb_ao_9f38462c {
+  //     display: var(--spappBarhide);
+  // }
+  .webPartContainer>div div:last-child>div~div:last-child {
+    display: var(--spappBarhide);
+  }
+
+  .ql-editor blockquote,
+  .ql-editor div,
+  .ql-editor h2,
+  .ql-editor h3,
+  .ql-editor h4,
+  .ql-editor ol,
+  .ql-editor p,
+  .ql-editor ul,
+  .ql-snow .ql-editor blockquote,
+  .ql-snow .ql-editor div,
+  .ql-snow .ql-editor h2,
+  .ql-snow .ql-editor h3,
+  .ql-snow .ql-editor h4,
+  .ql-snow .ql-editor ol,
+  .ql-snow .ql-editor p,
+  .ql-snow .ql-editor ul {
+    line-height: 1.2 !important;
+    margin: 0 0 5px !important;
+    font-size: 14px;
+  }
+
+  .HideMBFull {
+    display: none;
+  }
+
+  #spLeftNav {
+    display: var(--panel);
+  }
+
+  .ms-Panel-closeButton:hover {
+    // background-color: "[theme:themeLight]" !important;
+    background-color: var(--lightdarkHoverBG) !important;
+    //display: none;
+  }
+
+  .webPartContainer {
+    display: var(--titleHeader);
+  }
+
+  .a_h_50a7110f:not(.b_h_50a7110f) .r_h_50a7110f {
+    max-width: var(--maxWidth);
+    padding: var(--padding);
+    margin: var(--margin);
+  }
+
+  .a_h_50a7110f:not(.b_h_50a7110f):not(.p_h_50a7110f):not(.n_h_50a7110f) {
+    padding: var(--padding);
+  }
+
+  .a_f_50a7110f:not(.b_f_50a7110f) {
+    padding: var(--padding);
+  }
+
+  .a_a_50a7110f:not(.b_a_50a7110f) {
+    margin: var(--marginaa);
+    padding: var(--paddingaa);
+  }
+
+  .ja_af_9f38462c {
+    padding-top: var(--paddingTop);
+  }
+
+  .showMBToggle i {
+    // color: #fff;
+    color: var(--lightdarkColor);
+  }
+
+  .showMBCancel i {
+    // color: #fff;
+    color: var(--lightdarkColor);
+  }
+
+  .ms-Panel-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .ms-DetailsRow-cell.cell.cellPadded {
+    font-size: 14px;
+  }
+
+  .ms-ChoiceFieldGroup-flexContainer {
+    display: "flex";
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .ql-editor,
+  .ql-snow .ql-editor {
+    // background-color: rgb(243, 242, 241) !important;
+    background-color: #ffff;
+    border: 1px solid #ddd !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-title,
+  .ql-snow.ql-toolbar button {
+    // background-color: #777 !important;
+    background-color: #dedede !important;
+    color: #000000 !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-title {
+    // background-color: #777 !important;
+    background-color: #dedede !important;
+    color: #000000 !important;
+  }
+
+  div#DropDownAlign-list .ms-Dropdown-item button,
+  div#DropDownLists-list .ms-Dropdown-item button,
+  div#DropDownStyles-list .ms-Dropdown-item button {
+    background-color: #777 !important;
+  }
+
+  div#DropDownAlign-list .ms-Dropdown-item button,
+  div#DropDownLists-list .ms-Dropdown-item button,
+  div#DropDownStyles-list .ms-Dropdown-item button:hover {
+    // background-color: #777 !important;
+    background-color: #dedede !important;
+  }
+
+  button#DropDownStyles-list {
+    background-color: #777 !important;
+  }
+
+  // .ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button{
+  //   background-color: '[theme:themePrimary]'!important;
+  // }
+  .ms-Dropdown-caretDownWrapper .toolbarSubmenuCaret {
+    color: #000000 !important;
+  }
+
+  .ql-snow.ql-toolbar button,
+  .ql-snow .ql-toolbar button {
+    // background-color: #777 !important;
+    background-color: #dedede !important;
+    color: #000000 !important;
+  }
+
+  div#DropDownStyles-list .ms-Dropdown-item button {
+    background-color: #777 !important;
+  }
+
+  div#DropDownStyles-list .ms-FocusZone .css-47 .ms-Dropdown-items .dropdownItems {
+    background-color: #777 !important;
+  }
+
+  div#DropDownAlign-list .ms-Dropdown-item button#DropDownAlign-list0 .dropdownItemSelected,
+  div#DropDownLists-list .ms-Dropdown-item,
+  div#DropDownStyles-list .ms-Dropdown-item {
+    background-color: #777 !important;
+  }
+
+  div#DropDownStyles-list .ms-FocusZone .css-47 .ms-Dropdown-items .dropdownItems {
+    background-color: #777 !important;
+  }
+
+  div#DropDownAlign-list .ms-Dropdown-item button#DropDownAlign-list0 .dropdownItemSelected,
+  div#DropDownLists-list .ms-Dropdown-item,
+  div#DropDownStyles-list .ms-Dropdown-item {
+    background-color: #777 !important;
+  }
+
+  // .ql-toolbar {
+  //   display: block !important;
+  //   // background-color: #fff  !important;
+  // }
+  .ql-toolbar.ql-snow .ql-formats {
+    margin-right: 0px !important;
+    padding: 4px 5px;
+    border: 0.5px solid #ddd;
+  }
+
+  .ql-snow.ql-toolbar button {
+    background-color: #f5f5f5 !important;
+  }
+
+  .ql-active .ql-toolbar {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: inherit !important;
+    top: -28px;
+    opacity: 1;
+    height: 34px;
+    // box-shadow: 0 0 5px 0 #c8c8c8;
+    box-shadow: none !important;
+    // background-color: #fff !important;
+  }
+
+  /* Workbench Styles*/
+  #workbenchPageContent,
+  .CanvasComponent.LCS .CanvasZone {
+    max-width: 100% !important;
+  }
+
+  #spCommandBar {
+    display: var(--commandBar);
+  }
+
+  #spSiteHeader {
+    display: var(--TopSiteHeader);
+  }
+
+  #CommentsWrapper {
+    display: var(--CommentsWrapper);
+  }
+
+  .CanvasComponent.LCS .CanvasSection--read:not(.CanvasSection--fullWidth) .ControlZone:last-of-type {
+    min-height: 400px;
+    height: 100%;
+  }
+
+  // .c_c_fec47026{
+  //     border:none;
+  //     fill: none;
+  //     background: transparent;
+  //     height:100%;
+  //     color:red;
+  //    .height:100%;
+  //     color: rgb(233, 47, 47);
+  //     width:2%;
+  //   }
+
+  // .b_a_a3996340{
+  //   height:200% !important;
+  //   width:20px;
+  // }
+
+  // .a_a_a3996340:nth-of-type(1)>.b_a_a3996340{
+  //   width: 100% !Important;
+  //  }
+  //  .a_a_a3996340:nth-of-type(2)>.b_a_a3996340{
+  //      width: 100% !Important;
+  //  }
+  //  .a_a_a3996340:nth-of-type(3)>.b_a_a3996340{
+  //    width: 20px !Important;
+  //    height: 100% !Important;
+  //  }
+  //  .a_a_a3996340:nth-of-type(4)>.b_a_a3996340{
+  //      height: 100% !Important;
+
+  //      width: 20px !Important;
+  //     //  x: 50;
+  //     //  y: 80;
+  //  }
+
+  .c_c_fec47026>div:nth-child(1) {
+    width: 100%;
+  }
+
+  .c_c_fec47026>div:nth-child(2) {
+    width: 100%;
+  }
+
+  // .a_a_a3996340>div:nth-child(1){
+  //   width: 100%;
+  //  }
+  //  .a_a_a3996340>div:nth-child(2){
+  //      width: 100%;
+  //  }
+  //  .a_a_a3996340>div:nth-child(3){
+  //    width: 20px;
+  //      height: 100%;
+  //  }
+  //  .a_a_a3996340>div:nth-child(4){
+  //   height: 100%;
+  //      width: 20px;
+  //     //  x: 50;
+  //     //  y: 80;
+  //  }
+
+  // .sp-appBar-linkContainer {
+  //   display: none;
+  // }
+  .ms-PanelAction-close {
+    margin: 0px 3px 0 0;
+  }
+
+  .CanvasComponent.LCS .CanvasZone.CanvasZone--controlSelected .CanvasSection--edit {
+    min-height: 300px;
+  }
+
+  .CanvasComponent.LCS .CanvasZone:not(.CanvasZone--fullWidth) .ControlZone {
+    padding: 0px;
+  }
+
+  .CanvasZone>div {
+    max-width: var(--maxWidth1236) !important;
+  }
+
+  .a_c_50a7110f:not(.b_c_50a7110f) .l_c_50a7110f {
+    max-width: var(--maxWidth1236) !important;
+  }
+
+  .CanvasComponent.LCS .ControlZone.ControlZone--edit,
+  .CanvasComponent.LCS .ControlZone .ControlZone--position,
+  .ControlZone-control,
+  .ControlZone-control>div,
+  .ms-SPLegacyFabricBlock {
+    height: 100%;
+  }
+
+  .CanvasComponent.LCS .CanvasSection-col {
+    padding: 0px;
+  }
+
+  [dir="ltr"] .CanvasComponent.LCS .CanvasZone.CanvasZone--edit {
+    padding-left: 0px;
+  }
+
+  .selected-65::after {
+    border: 0px;
+  }
+
+  .CanvasComponent.LCS .CanvasToolboxHint:not(.AlignedHint) {
+    display: none;
+  }
+
+  .spAppAndPropertyPanelContainer .sp-appBar {
+    display: var(--spappBarhide);
+  }
+
+  // .spAppAndPropertyPanelContainer .sp-appBar {
+  //   min-width: 0px;
+  //   max-width: 0px;
+  // }
+  .CanvasComponent.LCS .Canvas--edit.Canvas--withLayout {
+    margin-left: 0px !important;
+  }
+
+  #workbenchPageContent>div:nth-child(3) {
+    padding: 0px !important;
+  }
+
+  .CanvasZone {
+    max-width: 100%;
+  }
+
+  #workbenchPageContent {
+    margin-top: 0px;
+  }
+
+  @media all and (max-width: 980px) {
+    .mobview {
+      overflow: scroll;
+    }
+  }
+
+  // @media screen and (min-width: 1024px){
+  //   .a_c_50a7110f:not(.b_c_50a7110f) .h_c_50a7110f {
+  //       max-width: var(--maxWidth1236);
+  //   }
+  //   }
+  @media screen and (min-width: 641px) {
+    [dir="ltr"] .CanvasComponent.LCS .CanvasZone.CanvasZone--edit {
+      padding-right: 0px;
+    }
+
+    .CanvasComponent.LCS .CanvasSection--read:not(.CanvasSection--fullWidth) .ControlZone {
+      margin-top: 0;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+
+    .showHalf,
+    .showFull {
+      display: none;
+    }
+
+    .pivotCustomBGcolor>.ms-Pivot {
+      margin-left: 4px;
+    }
+
+    .showMBCancel i,
+    .showMBToggle i {
+      // color: #fff;
+      color: var(--lightdarkColor);
+      margin-left: -7px;
+    }
+
+    .ShowMBFull {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      background: var(--lightdarkBGGray);
+    }
+
+    .ShowMBFull .ms-Nav-linkText {
+      color: var(--lightdarkColor);
+    }
+
+    .showHalf .ms-Nav-compositeLink.is-selected .ms-Nav-link,
+    .ShowMBFull .ms-Nav-compositeLink.is-selected .ms-Nav-link {
+      background-color: var(--lightdarkBG);
+    }
+
+    .ShowMBFull .ms-Nav-compositeLink:hover .ms-Nav-chevronButton {
+      color: var(--lightdarkColor);
+      // background-color: var(--lightdarkHoverBG);
+      background-color: var(--lightdarkBGGray);
+    }
+
+    .ShowMBFull .ms-Nav-compositeLink:hover .ms-Nav-link {
+      color: var(--lightdarkColor);
+      background-color: var(--lightdarkHoverBG);
+    }
+
+    .ShowMBFull .ms-Nav-chevronButton {
+      color: var(--lightdarkColor);
+    }
+
+    .ShowMBFull .ms-Button-icon {
+      color: var(--lightdarkColor);
+    }
+
+    .ShowMBFull .ms-Nav-compositeLink:hover .ms-Nav-linkText {
+      color: var(--lightdarkColor);
+    }
+
+    .ShowMBFull .ms-Nav-compositeLink {
+      background: var(--lightdarkBGGray);
+    }
+
+    .menuHideIcon {
+      display: none;
+    }
+
+    .ShowMBToggle {
+      display: block;
+      float: left;
+    }
+
+    .hideMBToggle {
+      display: none;
+    }
+
+    .hideMBCancel {
+      display: none;
+    }
+
+    .showMBCancel {
+      display: block;
+      float: left;
+    }
+  }
+
+  /*Workbench Styles*/
+  .cell-231 {
+    outline: transparent;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-height: 42px;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+
+  .isMultiline-237 {
+    outline: transparent !important;
+    position: relative !important;
+    display: inline-block !important;
+    box-sizing: border-box !important;
+    min-height: 42px !important;
+    vertical-align: top !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    padding-left: 12px !important;
+    word-break: break-word;
+  }
+
+  .ms-Panel-content {
+    height: 98%;
+    padding-bottom: 0;
+    padding-top: 5px;
+    box-sizing: border-box;
+  }
+
+  .ms-Panel-scrollableContent {
+    height: 99%;
+    padding-bottom: 0;
+    padding-top: 5px;
+    box-sizing: border-box;
+  }
+
+  .ms-PanelAction-close {
+    margin: -0.5px 5px 0 0;
+  }
+
+  .ms-Panel-navigation {
+    // background-color: "[theme:themePrimary]";
+    background-color: var(--lightdarkBGGray);
+    padding: 6px 0;
+    height: 30px;
+  }
+
+  .ms-Panel-headerText {
+    // color: #fff;
+    color: var(--lightdarkColor);
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .ms-Panel-closeButton {
+    // color: #fff;
+    color: var(--lightdarkColor);
+  }
+
+  .colorPanel {
+    color: var(--lightdarkColor);
+  }
+
+  .ms-Panel-commands {
+    margin: 0px;
+  }
+
+  .ms-Panel-closeButton:hover {
+    // background-color: #f4f4f4;
+    background-color: var(--lightdarkHoverBG) !important;
+    // color: #fff !important;
+    color: var(--lightdarkColor) !important;
+  }
+
+  .linkIsSelected:hover {
+    background-color: var(--lightdarkHoverBG) !important;
+    // color:#fff !important;
+    color: var(--lightdarkColor) !important;
+  }
+
+  .linkIsSelected::before {
+    background-color: var(--lightdarkColor);
+  }
+
+  .ms-Panel-contentInner .ms-Panel-header {
+    margin: 0px;
+  }
+
+  .ms-Panel-contentInner .ms-Panel-headerText {
+    position: relative;
+    top: 4px;
+    font-weight: 400;
+    overflow-y: none !important;
+  }
+
+  .ms-Button--primary {
+    min-width: 80px;
+    max-width: 100px;
+    width: auto;
+    width: 100%;
+  }
+
+  .ms-Button--primary {
+    color: var(--lightdarkColor) !important;
+    background-color: var(--lightdarkBGGray);
+    border: 1px solid var(--lightThemeBorderColor);
+  }
+
+  .ms-Button--primary:hover {
+    color: var(--lightdarkColor);
+    background-color: var(--lightdarkHoverBG);
+    border: var(--lightdarkBGGray);
+  }
+
+  .ms-Panel-scrollableContent {
+    height: 99%;
+    padding-bottom: 0px;
+  }
+
+  .ms-Panel-content {
+    margin-top: 5px;
+    height: 100%;
+    padding-bottom: 0px;
+  }
+
+  .helpPanelStyles .ms-Panel-content {
+    padding: 0px;
+  }
+
+  .linkTab {
+    box-shadow: 0 0 5px 0 #c8c8c8;
+    margin: 0px 30px 35px;
+    // width:92.2% !important;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+  }
+
+  // .ms-Panel-main{
+  //   background-color: #f4f4f4;
+  // }
+  .ms-Panel-main .ms-MessageBar-dismissSingleLine {
+    display: flex;
+    position: relative;
+    right: unset;
+  }
+
+  /*Sidenav Styles*/
+
+  .showFull {
+    max-width: 15%;
+    min-height: 650px;
+    max-height: 100%;
+    width: 20%;
+    float: left;
+    flex: 1;
+    background: var(--lightdarkBGGray);
+    //background-color: "[theme: themePrimary, default: #005a9e]";
+  }
+
+  .ShowHalf1 {
+    display: none;
+  }
+
+  .showHalf {
+    min-height: 650px;
+    max-height: 100%;
+    width: 44px;
+    float: left;
+    // flex: 1;
+    background: var(--lightdarkBGGray);
+    position: relative;
+    z-index: 9;
+    //background-color: "[theme: themePrimary, default: #005a9e]";
+  }
+
+  .showFull .ms-Nav-compositeLink,
+  .showHalf .ms-Nav-compositeLink {
+    background: var(--lightdarkBGGray);
+  }
+
+  .EmpName {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  a:-webkit-any-link {
+    text-decoration: none;
+  }
+
+  .linkTab {
+    box-shadow: 0 0 5px 0 #c8c8c8;
+    margin: 0px 30px 35px;
+    width: 45% !important;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+  }
+
+  .linkTabs {
+    box-shadow: 0 0 5px 0 #c8c8c8;
+    margin: 0px 30px 35px;
+    width: 96% !important;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+  }
+
+  .margintb {
+    margin: 1%;
+  }
+
+  .EmpDetails {
+    margin-left: 20px;
+    width: 47%;
+    padding: 10px 15px;
+    //box-shadow: 0 0 5px 0 #c8c8c8;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
+    // margin-top: 10px;
+  }
+
+  .EmpDetails2 {
+    display: flex;
+    margin-left: 20px;
+    width: 96%;
+    // padding: 32px 0px;
+    // box-shadow: 0 0 5px 0 #c8c8c8;
+  }
+
+  .linkText-117 {
+    margin: -2px 4px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: left;
+    text-overflow: ellipsis;
+  }
+
+  .showFull .ms-Nav-linkText {
+    color: var(--lightdarkColor);
+  }
+
+  .showFull .ms-Nav-compositeLink:hover .ms-Nav-linkText {
+    color: var(--lightdarkColor);
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-compositeLink:hover+.ms-Nav-navItems .ms-Nav-linkText {
+    color: var(--lightdarkColor);
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-compositeLink+.ms-Nav-navItems .ms-Nav-linkText {
+    color: var(--lightdarkColor);
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-compositeLink+.ms-Nav-navItems .ms-Nav-navItem:hover+.ms-Nav-linkText {
+    color: var(--lightdarkBG);
+  }
+
+  .showHalf .ms-Nav-compositeLink.is-selected .ms-Nav-link,
+  .showFull .ms-Nav-compositeLink.is-selected .ms-Nav-link {
+    background-color: var(--lightdarkBG);
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-compositeLink:hover .ms-Button-icon {
+    color: var(--lightdarkColor);
+  }
+
+  .showFull .ms-Nav-compositeLink:hover .ms-Nav-chevronButton,
+  .showHalf .ms-Nav-compositeLink:hover .ms-Nav-chevronButton {
+    color: var(--lightdarkColor);
+    // background-color: var(--lightdarkHoverBG);
+    background-color: var(--lightdarkBGGray);
+  }
+
+  .showFull .ms-Nav-compositeLink:hover .ms-Nav-link,
+  .showHalf .ms-Nav-compositeLink:hover .ms-Nav-link {
+    color: var(--lightdarkColor);
+    background-color: var(--lightdarkHoverBG);
+  }
+
+  .ms-Nav-link:hover .ms-Button-icon {
+    color: var(--lightdarkColor);
+  }
+
+  .contentDiv {
+    width: 84%;
+    padding: 0 3px 2px;
+    float: left;
+    background: var(--lightThemeBGcolorWhite);
+  }
+
+  .padding20 {
+    padding: 2%;
+  }
+
+  .contentShortDiv {
+    width: 95%;
+    padding: 0px 3px 2px;
+    float: left;
+    background: var(--lightThemeBGcolorWhite);
+  }
+
+  .tw-relative {
+    position: relative;
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-navItems {
+    display: none;
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-compositeLink:hover+.ms-Nav-navItems {
+    display: block;
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-compositeLink+.ms-Nav-navItems:hover {
+    display: block;
+  }
+
+  .showHalf .ms-Nav-navItem {
+    position: relative;
+  }
+
+  .showHalf .ms-Nav-navItem .ms-Nav-navItems {
+    background: #f4f4f4;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+  }
+
+  .showHalf .ms-Nav-chevronButton {
+    display: none;
+  }
+
+  .showFull .ms-Button-icon,
+  .showHalf .ms-Button-icon {
+    color: var(--lightThemeSwitcherTextColor) !important;
+  }
+
+  .showFull .ms-Nav-chevronButton {
+    color: var(--lightdarkColor);
+    // background: var(--lightdarkBG);
+    background-color: var(--lightdarkBGGray);
+  }
+
+  .showHalf .ms-Nav-compositeLink+.ms-Nav-navItems .ms-Nav-link {
+    border-bottom: 0px solid #e7e7e7;
+    min-height: 0px;
+    line-height: 20px;
+    padding: 5px 15px !important;
+    height: 35px;
+  }
+
+  .showFull .ms-Nav-compositeLink+.ms-Nav-navItems .ms-Nav-link {
+    height: 35px;
+  }
+
+  .showHalf .ms-Nav-groupContent>.ms-Nav-navItems .ms-Nav-navItem .ms-Nav-link {
+    padding: 0px;
+  }
+
+  .showHalf .ms-Nav-compositeLink:hover .ms-Nav-chevronButton {
+    background: inherit;
+  }
+
+  .menuIcon {
+    text-align: center;
+    padding: 5px 8px 5px 8px;
+    cursor: pointer;
+    color: var(--lightdarkColor);
+  }
+
+  .menuIconFull {
+    text-align: left;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    color: var(--lightdarkColor);
+    display: flex;
+  }
+
+  .showHalf .ms-Button-flexContainer {
+    display: block;
+    text-align: center;
+  }
+
+  .showHalf .ms-Button-icon,
+  .showFull .ms-Button-icon {
+    color: var(--lightdarkColor);
+  }
+
+  /*Sidenav Styles*/
+
+  .CanvasComponent.LCS .CanvasZoneContainer.CanvasZoneContainer--selected:before {
+    border: 0px;
+  }
+
+  .selected-109::after {
+    border: 0px;
+  }
+
+  .CanvasComponent.LCS .CanvasZoneContainer.CanvasZoneContainer--selected:before,
+  .CanvasComponent.LCS .CanvasZoneContainer:not(.CanvasZoneContainer--read):hover:before {
+    border: 0px;
+  }
+
+  .CanvasComponent.LCS .CanvasZone.CanvasZone--controlSelected .CanvasSection--edit {
+    min-height: 500px;
+  }
+
+  @media all and (max-width: 360px) {
+    .linkTab {
+      margin: 0 0 21px 21px;
+      width: 90.2% !important;
+    }
+
+    .EmpDetails {
+      width: 50% !important;
+
+      margin: 10px 20px 10px 14px !important;
+    }
+  }
+
+  @media all and (min-width: 361px) and (max-width: 400px) {
+    .EmpDetails {
+      width: 55% !important;
+
+      margin: 10px 20px 10px 14px !important;
+    }
+
+    .linkTab {
+      margin: 0 0 21px 22px;
+      width: 88.2% !important;
+    }
+  }
+
+  @media all and (min-width: 401px) and (max-width: 480px) {
+    .EmpDetails {
+      width: 58% !important;
+
+      margin: 10px 20px 10px 14px !important;
+    }
+
+    .linkTab {
+      margin: 0 0 21px 13px;
+      width: 90% !important;
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    .ms-MessageBar {
+      /* height: 33px; */
+      // -ms-flex-pack: center;
+      /* justify-content: center; */
+      display: table !important;
+    }
+
+    .ms-MessageBar-innerText span {
+      white-space: normal !important;
+    }
+
+    .reprt {
+      width: 97%;
+      padding-bottom: 5px;
+    }
+
+    .rprt {
+      margin-left: 0px;
+    }
+  }
+
+  @media all and (min-width: 601px) and (max-width: 920px) {
+    .ms-MessageBar {
+      /* height: 33px; */
+      // -ms-flex-pack: center;
+      /* justify-content: center; */
+      display: table !important;
+    }
+
+    .ms-MessageBar-innerText span {
+      white-space: normal !important;
+    }
+
+    .EmpDetails {
+      width: 92% !important;
+      margin-left: 0px;
+      margin: 10px 20px 10px 0px !important;
+    }
+  }
+
+  @media all and (min-width: 500px) and (max-width: 550px) {
+    .EmpDetails {
+      width: 85% !important;
+      margin-left: 0px;
+      margin: 10px 20px 10px 0px !important;
+    }
+
+    .linkTab {
+      margin: 0 0 21px 12px;
+      width: 92% !important;
+    }
+  }
+}
+
+/*Global Styles*/
+.diaheader {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.diasecondheader {
+  display: block;
+  text-align: center;
+  // color:'#000';
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+.topButton {
+  display: none;
+}
+
+.dia3rdheader {
+  display: block;
+  text-align: center;
+  color: "#e4e4e4";
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.dialogonboardstyle .main {
+  width: 55% !important;
+  height: 80% !important;
+}
+
+// .c_c_fec47026{
+//   border:none;
+//   fill: none;
+//   background: transparent;
+//   // .height:100%;
+//   // color: rgb(233, 47, 47);
+//   // width:2%;
+// }
+.sp-skipToContent {
+  border: none;
+  fill: none;
+  background: transparent;
+}
+
+body {
+  font-family: "Segoe UI", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+.topBarIconCloneEdit {
+  position: absolute;
+  top: 0px;
+  left: 74px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.insput {
+  border: 3px solid;
+  border-color: var(--lightdarkColor) !important;
+  border-radius: 5px;
+}
+
+.insput input[type~="text"] {
+  border: none;
+  fill: none;
+  background: transparent;
+  // background-color: none!important;
+  width: 100%;
+  border-radius: 5px;
+  // opacity: 0.33;
+}
+
+.time_input input[type="Number"]:focus,
+.time_input input[type="Number"]:focus-visible,
+.time_input select:focus-visible,
+.time_input select:focus {
+  // border: 1px solid blue;
+  // border-radius:6px;
+  border: 1px solid;
+  border-color: #727273 !important;
+  border-radius: 5px;
+  outline: none !important;
+  height: 26px;
+}
+
+.inputwidth {
+  width: 85%;
+  // color: var(--lightThemeTextColorBlack) !important;
+  // background-color: var(--lightThemeBGcolorWhite) !important;
+}
+
+// .insput input:focus
+// {
+// outline: none !important;
+// border: 3px solid;
+// border-color: var(--lightdarkColor)!important;
+// }
+// .txtbgcolor1:focus
+// {
+// border-color:'var(--lightdarkBGGray) !important';
+// }
+
+// input[type=text]
+// {
+// border:none;
+// fill: none;
+// background: transparent;
+// // background-color: none!important;
+// width:100%;
+// }
+.disabledinput {
+  width: 70%;
+  border: none;
+  background: none;
+  font-weight: 500;
+}
+
+.margintb {
+  margin: 1%;
+}
+
+.empLogo {
+  position: relative;
+}
+
+.topBarIconCloneEdit {
+  position: absolute;
+  top: 31px;
+  left: 74px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.topBarIconCloneEdit1 {
+  position: absolute;
+  top: 4px;
+  /* left: 262px; */
+  font-size: 16px;
+  padding: 8px;
+  color: var(--lightdarkColor);
+  cursor: pointer;
+  z-index: 999;
+  /* float: right; */
+  right: 38px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  left: 77px;
+  z-index: 9;
+  border: 1px solid #0078d4;
+  top: 34px;
+}
+
+//start
+
+//end
+.chartBlkStyles {
+  width: 44%;
+  float: left;
+  box-shadow: 0px 0px 9px 2px #ddd;
+  height: 100%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+  border-radius: 1%;
+}
+
+.graphMainDiv {
+  width: 100%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.mrgryt {
+  margin-right: 10px;
+}
+
+.topBarIconCloneEdit {
+  position: absolute;
+  top: 31px;
+  left: 74px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.topBarIconClone {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  font-size: 16px;
+  color: var(--lightdarkColor);
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.topBarIconClone1 {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  color: var(--lightdarkColor) !important;
+}
+
+.topBarIconClonenew {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  font-size: 16px;
+  color: var(--lightdarkColor);
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.topBarIconClonenewS {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  color: var(--lightdarkColor) !important;
+}
+
+.topBarIconClonenewSrefresh {
+  position: absolute;
+  top: 5px;
+  right: 32px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  // color: var(--lightdarkColor)!important;
+  color: #808080 !important;
+}
+
+.topBarIconCloneadd {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.topBarIconCloneaddS {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  color: var(--lightdarkColor) !important;
+}
+
+.topBarIconClone:hover {
+  background-color: "[theme:themeLight]" !important;
+  color: #333;
+  border-radius: 3px;
+}
+
+.topBarIconCloneadd:hover {
+  background-color: "[theme:themeLight]" !important;
+  color: #333;
+  border-radius: 3px;
+}
+
+.elementToFadeInAndOut {
+  -webkit-animation: fadeinout 2s linear forwards infinite;
+  animation: fadeinout 2s linear forwards infinite;
+  opacity: 0;
+}
+
+.elementToFadeInAndOut div {
+  width: 6px;
+  height: 6px;
+  // background: #fff;
+  background: var(--lightdarkColor);
+  display: inline-block;
+  margin-right: 2px;
+  border-radius: 50%;
+}
+
+.elementToFadeInAndOutCont {
+  -webkit-animation: fadeinout 2s linear forwards infinite;
+  animation: fadeinout 2s linear forwards infinite;
+  opacity: 0;
+}
+
+.elementToFadeInAndOutCont div {
+  width: 6px;
+  height: 6px;
+  background: #000;
+  display: inline-block;
+  margin-right: 2px;
+  border-radius: 50%;
+}
+
+.offbrdlabset {
+  min-width: 291px;
+  width: 100%;
+  margin-left: -8px;
+}
+
+.coLortheme {
+  color: #333;
+}
+
+@-webkit-keyframes fadeinout {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  50% {
+    opacity: 1;
+  }
+}
+
+.topBarIconClonenew:hover {
+  background-color: "[theme:themeLight]" !important;
+  color: #333;
+  border-radius: 3px;
+}
+
+.topBarIconImport {
+  position: absolute;
+  top: 5px;
+  right: 75px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.topBarIconImportS {
+  position: absolute;
+  top: 5px;
+  right: 75px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  color: var(--lightdarkColor) !important;
+}
+
+.mrgryt {
+  margin-right: 10px;
+}
+
+.emailsaveicon {
+  color: #333 !important;
+  cursor: pointer;
+}
+
+.topBarIconSave {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.topBarIconSaveS {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  font-size: 16px;
+  // color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  color: var(--lightdarkColor) !important;
+}
+
+.topBarIconImport:hover {
+  background-color: "[theme:themeLight]" !important;
+  color: #333;
+  border-radius: 3px;
+}
+
+.topBarIconSave:hover {
+  background-color: "[theme:themeLight]" !important;
+  color: #333;
+  border-radius: 3px;
+}
+
+.commBarandSearchStyles>div:last-child {
+  margin-left: auto;
+}
+
+.filters>div {
+  margin-right: 5px;
+}
+
+.Dashfilters>div {
+  min-width: 150px;
+  margin-right: 5px;
+}
+
+.prevnext {
+  min-width: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.clearfilter {
+  margin-top: 7px;
+  min-width: 40px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: var(--settingIconColor) !important;
+}
+
+.clearfilterOnOff {
+  margin-top: 7px;
+  min-width: 35px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: var(--settingIconColor) !important;
+}
+
+.calendarStyle {
+  margin-top: 7px;
+  font-weight: 800;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.checkboxflex {
+  display: flex;
+  min-width: 19%;
+  height: 32px;
+}
+
+.mainContentClass {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.employeeOnboarding {
+  // min-height: 650px;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  // overflow-y:auto;
+}
+
+.mainContent {
+  height: 100%;
+}
+
+.commBarandSearchStyles {
+  display: flex;
+  align-items: center;
+}
+
+.commBarandSearchStyles1 {
+  display: flex;
+
+  // align-items: center;
+}
+
+.commBarandSearchStyles1>div:last-child {
+  margin-left: auto !important;
+}
+
+.boxshadow {
+  box-shadow: 0 0 5px 0 #c8c8c8;
+}
+
+.mainhead {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0px;
+  line-height: 17px;
+  padding: 10px 0px 30px;
+}
+
+.flexclass {
+  display: flex;
+}
+
+.aligns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 230px;
+}
+
+.sideNavmain {
+  height: 100%;
+  // width:40px;
+  display: flex;
+  // border-top: 1px solid #ddd;
+}
+
+.themeDiv {
+  display: flex;
+}
+
+.themeCheck {
+  // flex: 0 1 25%;
+  flex: 0 1 33%;
+  // justify-content: space-around;
+}
+
+.settingLabel {
+  padding: 5px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  color: #333;
+}
+
+.addeditdelbutonStyles {
+  display: flex;
+  flex-flow: row;
+  flex: 0 1 10%;
+}
+
+.settingBlock {
+  padding: 1% 0px !important;
+  border-bottom: 1px solid #dadada;
+  min-height: 35px !important;
+}
+
+.settingBlockLast {
+  padding: 1% 0 !important;
+}
+
+.placeholderBlk div {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.placeholderBlk div button {
+  color: #333;
+  background-color: #fff;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  outline: 0;
+  min-width: 100px;
+  margin-right: 7px;
+  margin-bottom: 4px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #777;
+}
+
+.settingViewLabel {
+  padding: 0px;
+}
+
+.addeditdelbutonStyles>button {
+  margin-right: 2%;
+  background: #f4f4f4;
+  border: 0px;
+}
+
+.themeCheckPreonboarding {
+  // flex: 0 1 25%;
+  flex: 0 1 33%;
+  padding-left: 14px;
+  // justify-content: space-around;
+}
+
+.panelheader {
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  margin: 6px 0 4px 0;
+}
+
+.fieldsBlockStyles {
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.fieldsBlockStyles>div {
+  width: 100%;
+}
+
+.button {
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+.DynamicFormbutton {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.alighn {
+  // text-align: center;
+  text-align: left;
+}
+
+.alighns {
+  font-weight: bold;
+}
+
+.head {
+  text-align: center;
+}
+
+.panelele {
+  margin: 15px 150px 0 150px;
+  font-weight: bold;
+}
+
+.fullTopbar {
+  display: none;
+}
+
+.panelrow {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  // max-width: 800px;
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.Dashfilters {
+  display: flex;
+  justify-content: space-between;
+  // max-width: 800px;
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.CSVPanelMain {
+  height: 100%;
+  padding-top: 3%;
+  box-sizing: border-box;
+}
+
+.uploadCSVblkStyles {
+  width: 100%;
+}
+
+.downloadButton {
+  max-width: 38%;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}
+
+.importCSVFileBlk {
+  width: 100%;
+  // display: flex;
+  // flex-flow: row;
+}
+
+.importCSVFile {
+  width: 85%;
+  float: left;
+}
+
+.synWidth {
+  width: 184px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.synWidth2 {
+  width: 170px;
+}
+
+.synWidth1 {
+  width: 170px;
+  margin-left: 4px;
+  min-width: fit-content;
+}
+
+.synWidth3 {
+  width: 190px;
+  margin-left: 4px;
+}
+
+.panelcolumn {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  flex: 0 1 48%;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0px 0px 10px;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.activetoggleMargin {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0 0;
+  justify-content: space-between;
+}
+
+.activetoggle {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.resolutionlabel {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+// .check_box{
+//   flex: 0 1 48%;
+// }
+.assignedto {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  flex: 0 1 48%;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  box-sizing: border-box;
+  box-shadow: none;
+  // margin: 0px 0px 10px;
+  display: none;
+  overflow-wrap: break-word;
+}
+
+// ----custom styles for commandbar buttons start here-----
+.CustomCommandBarStyles .ms-Button-flexContainer {
+  // color: var(--lightdarkColor);
+  // background-color: var(--lightdarkBGGray);
+  background-color: var(--lightdarkBGTable) !important;
+  color: var(--lightdarkChange) !important;
+  height: 30px !important;
+}
+
+.CustomCommandBarStyles .ms-Button-flexContainer:hover {
+  background-color: var(--lightdarkHoverBG);
+}
+
+.CustomCommandBarStyles .ms-Button .ms-Button--commandBar:active {
+  background-color: var(--lightdarkBG);
+  // background-color:var(--lightdarkBGTable) !important;
+}
+
+.activetoggleMarginPreOnboard {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0 16px;
+  justify-content: space-between;
+}
+
+.CustomCommandBarStyles .ms-Button-flexContainer .ms-Button-icon {
+  // color: var(--lightdarkColor) ;
+  color: var(--lightdarkChange) !important;
+}
+
+.IconStyles .ms-Button-flexContainer .ms-Button-icon {
+  color: #fff;
+  background-color: none;
+}
+
+.SaveIconStyles .root:hover {
+  background-color: #bdda9b !important;
+}
+
+// ----custom styles for commandbar buttons end here-----
+.addtaskbtn {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  flex: 0 1 48%;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 13px 0 0 0;
+  display: block;
+  overflow-wrap: break-word;
+  text-align: end;
+}
+
+.helpPanelStyles .ms-Panel-content {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.closeEmpDetails {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.helpMain {
+  height: 100%;
+  width: 100%;
+  margin-left: -15px;
+  overflow: hidden;
+  position: relative;
+  margin-top: -16px;
+  // float: left;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  min-height: 100%;
+  width: 30%;
+  margin-right: 2%;
+  float: left;
+  background: var(--lightThemeBGcolorWhite);
+  // margin-left: 0%;
+  // display: inline-block;
+  overflow-y: auto;
+}
+
+.tablinks {
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.tablinks a {
+  color: #000;
+  text-decoration: none;
+}
+
+.tab button:hover {
+  background-color: var(--lightThemeHoverBGColor) !important;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.custommail {
+  float: right;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.custommail1 {
+  float: right;
+  padding-top: 4px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.tabcontent {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 0px solid #ccc;
+  border-top: none;
+  width: 60%;
+  // background: #fff;
+  text-align: center;
+  //float: right;
+  padding-top: 15%;
+  padding-left: 0%;
+}
+
+.versionStyle {
+  font-size: 13px;
+  color: "[theme:themePrimary]";
+}
+
+.tabcontent img {
+  width: 100%;
+}
+
+.tabcontent a {
+  display: block;
+  color: "[theme: themePrimary]";
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.closeHelpModal {
+  position: absolute;
+  right: 57px;
+  top: 15px;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.tablinks {
+  background-color: inherit;
+  float: left;
+  border: none;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  outline: 0;
+  cursor: pointer;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 14px;
+  min-width: 100%;
+}
+
+.linkColor {
+  color: "[theme:themePrimary]" !important;
+  text-decoration: underline !important;
+}
+
+.linkColor {
+  color: "[theme:themePrimary]" !important;
+  text-decoration: underline !important;
+}
+
+.chrtheading {
+  width: 50%;
+  color: var(--lightThemeTextColorBlack) !important;
+  // height:40%;
+  display: inline-block;
+}
+
+.chrtmob {
+  display: grid;
+  width: 100%;
+  column-gap: 6px;
+  // margin: 6px 3px;
+  position: relative;
+  grid-template-columns: 33% 33% 33%;
+}
+
+@media all and (min-width: 1200px) and (max-width: 2570px) {
+  .filters {
+    justify-content: flex-start !important;
+    display: flex;
+  }
+
+  .Dashfilters {
+    justify-content: flex-start !important;
+    display: flex;
+  }
+}
+
+@media all and (max-witdh: 600px) {
+  .new4 .ms-pivot {
+    display: contents !important;
+  }
+}
+
+/*Pagination*/
+.paginationBlk,
+.paginationTopBlk {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  flex-flow: row;
+  padding: 8px;
+  align-content: flex-end;
+  margin-left: auto;
+  // background: #fff;
+}
+
+.paginationTopBlk label {
+  margin-right: 2%;
+}
+
+.shownumberofpages {
+  align-content: flex-start;
+}
+
+.shownumberofpages {
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.previousandnext {
+  align-content: flex-end;
+  //margin-left: auto;
+}
+
+.shownumberofpages span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.previousandnext {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.previousandnext button,
+.previousandnext button span {
+  border: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expandGraphControl {
+  position: absolute;
+  top: 4%;
+  left: 20%;
+  // height: 270px;
+  width: 65%;
+  background-color: #fff;
+  transform: (1, 1);
+  transition: transform 1s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 0, 0, 0.22);
+  z-index: 1;
+}
+
+.previousandnext>span {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #ddd;
+}
+
+.fLexcon {
+  height: 33px !important;
+}
+
+.AdvanceIcon {
+  color: var(--lightdarkChange) !important;
+}
+
+.AdvanceIcon>span>i {
+  color: var(--settingIconColor) !important;
+}
+
+.AdvanceIcon:hover {
+  background: var(--lightdarkBG) !important;
+}
+
+// .AdvanceIcon1{
+//   color: var(--lightdarkChange) !important;
+//   margin-top: 10px;
+//   margin-right: 10px;
+//   cursor: pointer;
+// }
+.obpLogos {
+  height: 65px;
+  min-width: 90px;
+  max-width: 10rem;
+  margin-top: 10px;
+  margin-left: -15px;
+}
+
+.CurrentLogo {
+  width: 104%;
+  height: 65px;
+  margin-top: 20px;
+  margin-left: -10px;
+  max-width: 11rem;
+  min-width: 75px;
+}
+
+// .rprt {
+//   margin-left: 350px;
+//   padding:7px;
+// }
+// .reprt {
+//   width:100%;
+// }
+/*pagination*/
+
+.sunwidth {
+  width: 100% !important;
+  min-width: 289px !important;
+  margin-left: -7px !important;
+}
+
+.confidetailwidth {
+  min-width: 290px !important;
+  width: 100% !important;
+}
+
+.prsondetail {
+  width: 93%;
+  display: inline-flex;
+  margin: 3px 14px;
+  padding: 2px 6px;
+  justify-content: space-between;
+}
+
+.charts {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 11px;
+}
+
+.Chartset {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  margin-top: 16px;
+  margin-left: -86px;
+}
+
+.employeeOnboarding {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .activeClrFilterOption {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: "[theme:themePrimary]";
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 13px;
+    margin-right: 2%;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  .editorBlockStyles {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .RichEditorBlk {
+    width: 100%;
+  }
+
+  .ql-snow,
+  .ql-snow * {
+    color: #000 !important;
+  }
+
+  .ql-toolbar.ql-snow {
+    width: 50%;
+  }
+
+  span#DropDownStyles-option {
+    color: #000000 !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-caretDownWrapper i {
+    color: #000000 !important;
+  }
+
+  .ql-toolbar .ms-Dropdown-item {
+    background-color: #dedede !important;
+    color: #000000 !important;
+  }
+
+  span#DropDownStyles-option {
+    color: #333 !important;
+  }
+
+  span#DropDownAlign-option {
+    color: #333 !important;
+  }
+
+  .ql-toolbar #DropDownStyles-option .toolbarSubmenuDisplayButton {
+    color: #333 !important;
+  }
+
+  .ql-toolbar .ms-TooltipHost {
+    color: #000000 !important;
+  }
+
+  .ql-toolbar {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    // position: absolute;
+    top: -28px;
+    opacity: 1;
+    height: 34px;
+    box-shadow: 0 0 5px 0 #c8c8c8;
+    color: #000 !important;
+  }
+
+  .placeholderBlk {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .placeholderBlk h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+
+  .placeholderBlk div {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .placeholderBlk div button {
+    color: #333;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    outline: 0;
+    min-width: 100px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    box-shadow: none;
+    border: 1px solid #777;
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .spinnerLoadStyle {
+    margin-top: 6%;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  // .row{
+  //   width: 50px;
+  // }
+
+  .iconbuttonstyle {
+    margin-bottom: 5px;
+    margin-left: -7px;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system,
+      BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+  .buttonMain {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system,
+      BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .addnewGrid {
+    grid-template-columns: 100%;
+  }
+
+  .fullTopbar {
+    // width: 100%;
+    display: block;
+    background-color: var(--lightdarkBGGray);
+    overflow: hidden;
+    padding: 5px 10px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .chartBlkStyles {
+    width: 65%;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .commBarandSearchStyles {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .cMdbrstyle {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .cmdSrchstyle {
+    width: 57%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .commBarandSearchStyles>div:last-child {
+    margin-right: 6px;
+  }
+
+  .themeCheck {
+    // flex: 0 1 25%;
+    flex: 0 1 33%;
+    justify-content: space-around;
+  }
+
+  .reprt {
+    width: 97%;
+    padding-bottom: 5px;
+  }
+
+  .rprt {
+    margin-left: 0px;
+  }
+}
+
+.checkbxsetting {
+  padding: 4px 0px;
+}
+
+.checkbxsettingsChoose {
+  padding: 4px 0px;
+
+  input {
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+
+.savebtn {
+  margin-top: 7px;
+}
+
+.displayflex {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  // .ms-MessageBar{
+  //   min-height: 33px;
+  //   padding: 5px;
+  //   height:auto;
+  // }
+  // .ms-MessageBar-dismissSingleLine{
+  //   padding-top: 5px;
+  // }
+}
+
+@media all and (max-width: 480px) {
+  //   .ms-MessageBar-text{
+  //     justify-content: left;
+  //   }
+  //   .ms-Panel-main .ms-MessageBar-dismissSingleLine {
+  //     display: table;
+  //     position: relative;
+  //     right: unset;
+  // }
+}
+
+@media all and (min-width: 376px) and (max-width: 400px) {
+  // .commBarandSearchStyles>div:last-child {
+  //   margin-left:67px;
+  // }
+  // .srchbx .commBarandSearchStyles>div:last-child {
+  //   margin-left:133px !important;
+  // }
+}
+
+@media all and (min-width: 401px) and (max-width: 480px) {
+  // .commBarandSearchStyles>div:last-child {
+  //   margin-left:104px;
+  // }
+  // .srchbx .commBarandSearchStyles>div:last-child {
+  //   margin-left : 150px !important;
+  // }
+}
+
+@media all and (max-width: 375px) {
+  // .commBarandSearchStyles>div:last-child {
+  //   margin-left:52px;
+  // }
+  // .srchbx .commBarandSearchStyles>div:last-child {
+  //   margin-left: 103px !important;
+  // }
+}
+
+@media all and (min-width: 481px) and (max-width: 600px) {
+
+  // .commBarandSearchStyles>div:last-child {
+  //   margin-left: 32px;
+  // }
+  // .srchbx .commBarandSearchStyles>div:last-child {
+  //   margin-left: 83px !important;
+  // }
+  .EmpDetails {
+    margin-left: 0px;
+  }
+
+  .flxcls {
+    width: 100%;
+  }
+
+  .flexclass {
+    // display: -ms-flexbox;
+    display: grid !important;
+  }
+
+  .chrtmob {
+    display: block;
+  }
+
+  .chrtheading {
+    width: 100% !important;
+  }
+}
+
+@media all and (min-width: 601px) and (max-width: 950px) {
+  .flexclass {
+    display: grid;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .ContentEmailDisplay {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .ms-MessageBar-innerText span {
+    display: table;
+  }
+
+  .innerText {
+    text-overflow: ellipsis;
+    //  white-space: pre-wrap;
+  }
+
+  .flexclass {
+    display: grid;
+  }
+
+  .employeeOnboarding .ms-MessageBar-dismissalSingleLine {
+    position: relative;
+    display: inline-table !important;
+  }
+
+  .chrtmob {
+    display: block;
+  }
+
+  .chrtheading {
+    width: 100% !important;
+  }
+}
+
+@media all and (min-width: 850px) and (max-width: 1165px) {
+  .offbrdlist {
+    display: grid;
+    width: max-content;
+  }
+}
+
+.offbrdsavbtn {
+  margin-top: 7px !important;
+}
+
+.quiklnk {
+  margin-top: -32px;
+  margin-left: 114px;
+}
+
+.emptychart {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  color: grey;
+  font-size: 14px;
+}
+
+// training
+
+.trainingrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  // border-bottom: 1px solid #33333357;
+  margin: 2px 0px;
+  padding: 2px 0px;
+}
+
+.labelwdth {
+  width: 35%;
+}
+.labelwidthQuestion {
+  width: 37%;
+}
+
+// .ms-Callout-main{
+//     max-height: 300px !important;
+// }
+
+.separatorButtonBlock {
+  border-bottom: 1px solid #ddd;
+  min-height: 35px;
+  padding: 5px 0px;
+}
+
+.alignLeft {
+  width: 50%;
+  float: left;
+}
+
+.alignLeft_longtext {
+  width: 80%;
+  float: left;
+}
+
+.alignRight {
+  // width: 50%;
+  float: right;
+}
+
+// .dragMsForm{
+//   display: grid;
+//   grid-template-columns:100%;
+//   width: 100%;
+//   height: 100%;
+// }
+
+.dragstyle {
+  display: inline-grid;
+  background-color: var(--lightdarkBGTable);
+}
+
+.labeltextfield {
+  width: 98%;
+}
+
+.labeltextfieldPreboarding {
+  width: 60%;
+}
+
+.labeltextfield1 {
+  width: 98%;
+  display: flex;
+  // justify-content:space-between ;
+  column-gap: 10px;
+}
+
+.datewidth {
+  width: 21%;
+}
+
+.datewidth1 {
+  width: 40%;
+  display: flex;
+  // justify-content: center;
+}
+
+.datewidth2 {
+  width: 19%;
+  margin-top: 5px;
+  display: flex;
+  // justify-content: end;
+}
+
+.trainingfilter {
+  display: flex;
+  width: 73%;
+  column-gap: 6px;
+  margin-left: 5px !important;
+}
+
+.dragPreboardingInfo {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+}
+
+.dragPreboardingInfos {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  width: 100%;
+  row-gap: 0px;
+  // margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+.PreboaringPencilIcon{
+  position: absolute;
+    top: 20px;
+    background: var(--lightThemePanelBGSwitcher);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    right: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--lightThemeBorderColor);
+}
+
+.alighnCen {
+  // text-align: center;
+  text-align: center;
+}
+
+.syncbuttonicon {
+  align-items: center;
+  display: flex;
+}
+
+.synminwidth {
+  min-width: 187px;
+  margin-left: -5px;
+}
+
+.separatorButtonBlock {
+  border-bottom: 1px solid #ddd;
+  min-height: 35px;
+  padding: 5px 0px;
+}
+
+.alignLeft {
+  width: 50%;
+  float: left;
+}
+
+.alignRight {
+  // width: 50%;
+  float: right;
+}
+
+.ConfigureStyle {
+  color: var(--lightdarkChange) !important;
+  background-color: #ffffff !important;
+  border: 1px solid var(--lightdarkChange) !important;
+}
+
+.disnone {
+  display: none;
+}
+
+.rotationclass {
+  animation: rotation 2s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+  color: var(--lightdarkChange);
+}
+
+.FlowLoading {
+  color: var(--lightdarkChange);
+  font-size: 25px;
+  animation: rotation 2s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+.EssDetailsList {
+  box-shadow: 0 0 5px 0 #c8c8c8;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.Textfieldstyles {
+  color: var(--lightdarkColor) !important;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
+
+.Textfieldstyling {
+  color: var(--lightdarkColor) !important;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+}
+
+.spinner {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.spinnerPreOnboarding {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.spinnerUsersOnborder {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+}
+
+.spinnerOnBoardingPanel {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  z-index: 999;
+}
+
+.alignLeftForReminder {
+  float: left;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.alignRightWithTextToggle {
+  float: right;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 5px;
+}
+
+.activetoggleMarginAdSet {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Brandlogo {
+  padding: 0% 0px !important;
+  padding-bottom: 1% !important;
+  float: left;
+}
+
+.logonotebutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logonote {
+  width: 75%;
+  font-size: 13px;
+}
+
+.btn1 {
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AdvanceIcon1 {
+  color: var(--lightThemeTextColorBlack);
+  // color: #b1b1b1 !important;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.uploadLogoButton {
+  display: flex;
+  align-items: center;
+}
+
+.manualButton {
+  // Our button
+  text-decoration: none;
+  height: 32px;
+
+  // Primary Button
+  min-width: 80px;
+  color: var(--lightdarkColor) !important;
+  background-color: var(--lightdarkBGGray);
+
+  // Basic Button
+  outline: transparent;
+  position: relative;
+  font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: $ms-font-size-m;
+  font-weight: $ms-font-weight-regular;
+  border-width: 0;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 16px;
+  font-weight: $ms-font-weight-semibold;
+  font-size: $ms-font-size-m;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 4px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.imgload {
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.imgload i {
+  cursor: pointer;
+}
+
+.imgload input {
+  display: none;
+}
+
+// .Card {
+//   padding: 1% 0px !important;
+//   padding-bottom: 1% !important;
+//   float: left;
+//   display: flex;
+//   column-gap: 15px;
+//   width: 100%;
+//   box-sizing: border-box;
+//   border-bottom: 1px solid #dadada;
+// }
+.GlobalDetailsListForScrollBar {
+  margin-left: 2px;
+  display: grid;
+  width: 99.7%;
+  overflow-x: auto;
+}
+
+.GLobEODetailListClassForRowHeight {
+  .footer {
+    max-height: 70px;
+    min-height: 70px;
+    font-weight: 400;
+    font-size: 15px;
+    // background: var(--lightdarkBGTable);
+
+    .ms-DetailsRow-cell {
+      display: flex !important;
+      // justify-content: center
+      align-items: center;
+      max-height: 70px;
+      min-height: 70px;
+    }
+  }
+
+  .ms-DetailsRow-fields {
+    max-height: 72px !important;
+  }
+
+  .ms-DetailsRow-cell {
+    padding: 2px !important;
+  }
+
+  .DynamicColumn.ms-DetailsRow-cell{
+    text-align: right !important;
+      }
+
+  .ms-Dropdown {
+    .ms-Dropdown-title {
+      padding: 2px 23px 0px 4px !important;
+    }
+  }
+
+  .ms-TextField-field {
+    padding: 2px !important;
+  }
+}
+
+.addAssetStyles {
+  .spinner {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .spinner>div {
+    width: 18px;
+    height: 18px;
+    margin: 0px 5px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+
+  .spinner .bounce3 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+
+  .dragMsForm {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  @-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+      -webkit-transform: scale(0);
+    }
+
+    40% {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+
+    40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}
+
+.spinner>div {
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.spinnerPreOnboarding>div {
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinnerPreOnboarding .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinnerPreOnboarding .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.spinnerUsersOnborder>div {
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinnerUsersOnborder .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinnerUsersOnborder .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.spinnerOnBoardingPanel>div {
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinnerOnBoardingPanel .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinnerOnBoardingPanel .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+// .linkTab{
+//   box-shadow: 0 0 5px 0 #c8c8c8;
+//   margin: 0px 30px 35px;
+//   width:45% !important;
+//   font-size: 16px;
+//   font-weight: 500;
+//   display: flex ;
+// }
+
+.Card {
+  padding: 1% 0px !important;
+  padding-bottom: 1% !important;
+  float: left;
+  display: flex;
+  column-gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
+}
+
+.chartsLayout {
+  height: 235px !important;
+  border: 1px solid var(--lightThemeBorderColor);
+  background: var(--lightThemeBGcolorWhite);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+
+.chartsLayoutExpand {
+  // height: 390px !important;
+  padding-bottom: 15px;
+  background: var(--lightThemeBGcolorWhite);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+
+.ChartSize {
+  width: 100%;
+  height: 267px;
+}
+
+.daysBeforeText {
+  margin: auto;
+  font-size: 13px;
+  padding: 3px;
+  float: right;
+  color: var(--lightThemeTextColorBlack);
+}
+
+.ChartsSize {
+  height: 200px !important;
+  margin-top: -15px !important;
+}
+
+.ChartsSizeExpand {
+  height: 370px !important;
+  margin-top: -15px !important;
+}
+
+.TaskCheckBox {
+  display: flex;
+  margin-top: 10px;
+}
+
+.CheckBoxTask {
+  margin-top: 5px;
+}
+
+.CheckBoxGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addnewColumn {
+  display: inline-grid;
+  grid-template-columns: 33% 33% 32%;
+  width: 100%;
+  gap: 5px;
+}
+
+.Attatcmenticons {
+  overflow: hidden;
+  width: auto;
+  font-size: 14px;
+  color: var(--textIconColor);
+  display: flex;
+}
+
+.Attatchmentext1 {
+  font-size: 12px;
+  overflow: hidden;
+  width: auto;
+  margin-right: 10px;
+}
+
+.AttatchemntDiv {
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
+  max-width: auto;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.FileNameBox {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.FileNameBox a {
+  // display: grid;
+  // grid-template-columns:25% 25% 25% 25%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  margin-left: 0;
+  border-radius: 5px;
+  padding: 3px 0;
+  // display: inline-block;
+  width: 100%;
+}
+
+.FileNameBoxTask {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.FileNameBoxTask a {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  margin-left: 0;
+  border-radius: 5px;
+  padding: 3px 0;
+  // display: inline-block;
+  width: 100%;
+}
+.cropperstyle{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.AttachFlexWrap{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.AttachMainBoxImport {
+  background: #fff;
+  padding: 5px 0 5px 5px;
+  border-radius: 3px;
+  // display: -ms-flexbox/;
+  display: flex;
+  // -ms-flex-align: self-end;
+  // align-items: self-end;
+  align-items: center;
+  // -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  min-width: min-content;
+  max-width: min-content;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.AttachMainBox {
+  background: #fff;
+  padding: 5px 0 5px 5px;
+  border-radius: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: self-end;
+  align-items: self-end;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  min-width: 140px;
+  max-width: 140px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.AttachMainStandardBox {
+  background: #fff;
+  padding: 5px 0 5px 5px;
+  border-radius: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: self-end;
+  align-items: self-end;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+  min-width: 140px;
+  max-width: 140px;
+  margin-bottom: 5px;
+}
+
+.AttachFileLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 12px;
+  color: #222 !important;
+}
+.AssessmentAttachFileLabel{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 12px;
+  color: #222 !important;
+  min-width: 110px;
+  max-width: 150px;
+}
+
+.FileCancelIcon  {
+  .ms-Button .ms-Button--action{
+   background-color: red !important;
+   color: black !important ;
+  }
+  padding: 0;
+}
+.AttachFlexWrap .FileLabelDiv{
+width: calc(100% - 10px);
+}
+
+.FileLabelDiv {
+  max-width: calc(100% - 30px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.AttachDocIcon {
+  color: var(--lightdarkChange);
+}
+
+.checkbxsettingsChoose {
+  padding: 4px 0px;
+
+  input {
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+
+.settingsText {
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.UnderLine {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 0px !important;
+  border-bottom: 1px solid #dadada;
+  min-height: 25px !important;
+  margin-bottom: 5px;
+}
+
+//Mail Box Integration Styles Start
+.MailBoxSteps {
+  display: flex;
+}
+
+.StepSuccessCircle {
+  background-color: #26a541;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.StepErrorCircle {
+  background-color: #ff4343;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.Step3Circle {
+  background-color: #f9a825;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.StepNotTrue {
+  font-size: 22px;
+  border-radius: 50%;
+  color: #d5d5d5;
+}
+
+.stepsContent {
+  margin-left: 10px;
+}
+
+.StepsLine1 {
+  background: #26a541;
+  border-color: #26a541;
+  border-radius: 1px;
+  height: 94px;
+  animation: 2s linear;
+  -webkit-animation: expand 3s;
+}
+
+.StepsLine2 {
+  background: #26a541;
+  border-color: #26a541;
+  border-radius: 1px;
+  height: 94px;
+  animation: 2s linear;
+  -webkit-animation: expand 3s;
+}
+.StepsLineNotification{
+  background: #26a541;
+  border-color: #26a541;
+  border-radius: 1px;
+  height: 54px;
+  width: 75%;
+  animation: 2s linear;
+  -webkit-animation: expandPosition 3s;
+}
+
+.LabelDisabled {
+  font-weight: 400;
+  min-width: max-content;
+}
+
+.LabelMailID {
+  font-weight: 400;
+  font-size: 12px;
+  min-width: max-content;
+  color: #878787;
+}
+
+.Center {
+  margin-top: -5px;
+  background: #f0f0f0;
+  height: 90px;
+  width: 2.4%;
+  margin-left: 8px;
+}
+
+.Center1 {
+  margin-top: -5px;
+  background: #f0f0f0;
+  height: 90px;
+  width: 25%;
+  margin-left: 8px;
+}
+.ApproversCenter{
+  margin-top: -5px;
+  background: #f0f0f0;
+  height: 50px;
+  width: 25%;
+  margin-left: 8px;
+}
+
+.TaskTempPivot {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.PleaseWait {
+  color: var(--lightThemePivotTextBlack) !important;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.FlowLoaderComponent {
+  position: absolute;
+  top: 240px;
+  left: 225px;
+}
+
+.ExportIcon {
+  display: flex;
+  gap: 5px;
+  // right: 0px;
+  // top: 7px;
+  // position: absolute;
+  justify-content: flex-end;
+  margin-bottom: 7px;
+  margin-top: -7px;
+}
+
+.ExportIcon1 {
+  right: 5px;
+  top: 10px;
+  position: absolute;
+}
+
+.Icons {
+  display: flex;
+}
+
+.wideViewIcon {
+  margin-left: auto;
+  color: #000000;
+  width: fit-content;
+  display: flex;
+  margin-right: 10px;
+
+  .active {
+    background-color: var(--lightdarkBGGray) !important;
+    // top: 8px;
+    color: var(--lightdarkColor) !important;
+
+    i {
+      color: var(--lightdarkColor);
+    }
+
+    &:hover {
+      background: var(--lightdarkColor) !important;
+
+      i {
+        color: unset;
+      }
+    }
+  }
+}
+
+.wideViewIcon {
+  .ms-Button--icon>i {
+    color: var(--settingIconColor) !important;
+  }
+}
+
+.profileCard1 {
+  width: 20%;
+  height: 250px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 #c8c8c8;
+  display: grid;
+}
+
+.profileCard1:hover .ProfileCard {
+  display: block;
+}
+
+.ProfileCard {
+  width: 30%;
+  display: grid;
+  margin-right: 5px;
+  border-right: 1px solid #ddd;
+}
+
+.ProfileDetails {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 0 #e5e5e5;
+  margin: 10px;
+}
+
+.ProfileFullCard {
+  box-sizing: border-box;
+  // background: var(--lightThemeBGcolorWhite);
+  border-radius: 0px;
+  border: 1px solid #d3d1ce;
+  display: flex;
+  margin-top: 15px;
+  // align-items: center;
+  align-items: flex-start;
+}
+
+.FullWidth {
+  width: 100%;
+}
+
+.verticalLine {
+  width: 1px;
+  background-color: #e5e5e5;
+  margin: 15px 0px 15px 0px;
+}
+
+.CandidateName {
+  font-size: "20px";
+  padding: "2px 0px";
+  color: var(--settingIconColor) !important;
+}
+
+.Rejected {
+  background-color: rgb(196, 49, 72);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  position: absolute;
+  top: 56px;
+  left: 59px;
+}
+
+.logonote {
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.PositionLabel {
+  // color: var(--lightdarkChange) !important;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 2px 0px;
+}
+
+// .PreboardingInfoTitles{
+//   color: #000 !important;
+// }
+.DeptAndJoindate {
+  font-size: 15px;
+  padding: 2px 0px;
+  color: #b1b1b1 !important;
+}
+
+.Label {
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.DynamicFormDiv {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.DynamicFormLeftDivwithButton {
+  border: 1px solid #d3d1ce;
+  padding: 10px;
+  width: 100%;
+  background-color: #fbfbfb;
+  // overflow-y: scroll;
+}
+
+.MainDivDynamicForm {
+    display: flex;
+}
+
+.DynamicFormLeftDiv {
+  width: 84%;
+  display: block;
+}
+
+.DragAlign {
+  display: flex;
+  align-items: center;
+}
+
+.Addsection {
+  display: flex;
+  margin-top: -14px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.MandCheckbox {
+  position: absolute;
+  right: 23px;
+  top: 6px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.checkboxstyle {
+  padding: 5px 0px;
+}
+
+.DeleteIcon {
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+  right: 5px;
+  // top: 9px;
+}
+
+.MessageBoxIcon {
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+  right: 50px;
+  // top: 9px;
+}
+
+.MessageBoxIcon i {
+  font-size: 16px;
+}
+
+.CustomFormRightDiv {
+  width: 35%;
+  border: 1px solid #d3d1ce;
+  padding: 10px;
+  background-color: #fbfbfb;
+  display: "block";
+  // height: calc(100vh - 29px);
+  // margin-left: 51vw;
+  }
+
+@keyframes expand {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 95px;
+  }
+}
+@keyframes expandPosition {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 54px;
+  }
+}
+
+//Mail Box Integration Styles End
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.preOnboardHomeFilter {
+  width: 100%;
+  max-width: 300px;
+  min-width: 150px;
+}
+
+.MainButtonDivLeftAlign {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.MainButtonDivCenterAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.LeftPrimarybutton {
+  margin-right: 10px;
+}
+
+/*Pagination*/
+
+.pagination_dev_child_BLK {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  margin-left: auto;
+  flex-flow: row;
+}
+
+// .tw-flex,
+.pagination_dev_top_BLK {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  padding: 8px;
+  align-content: flex-end;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.paginationTopBlk {
+  gap: 10px;
+}
+
+.paginationBlk,
+.paginationTopBlk {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  flex-flow: row;
+  padding: 8px;
+  align-content: flex-end;
+  margin-left: auto;
+  // background: #fff;
+}
+
+.pagination_dev_top_BLK {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  padding: 8px;
+  align-content: flex-end;
+  margin-left: auto;
+}
+
+.paginationTopBlk label {
+  margin-right: 2%;
+}
+
+.pagination_dev_show_no_of_pages {
+  align-content: flex-start;
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.pagination_dev_show_no_of_pages span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.shownumberofpages {
+  align-content: flex-start;
+  color: var(--lightThemeTextColorBlack) !important;
+}
+
+.shownumberofpages span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.pagination_dev_previous_and_next {
+  align-content: flex-end;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.previousandnext {
+  align-content: flex-end;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.pagination_dev_previous_next_button {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 7px 0 7px;
+  cursor: pointer;
+}
+
+.pagination_span {
+  border: 0px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #ddd;
+}
+
+.HomeCountStyles {
+  font-size: 20px;
+  // color: #fff;
+  font-weight: 700;
+  position: relative;
+  top: -3px;
+}
+
+.previousandnext button,
+.previousandnext button span {
+  border: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+}
+
+//pagination end
+
+.DynamicFormLeftSideDAD {
+    border: 1px solid #d3d1ce;
+  padding: 10px;
+  width: 65%;
+  background-color: #fbfbfb;
+  display: "block";
+  // position: absolute;
+}
+
+// <----------------------- APPROVE WORKFLOW ------------------------->
+.approve-workflow-save-btn {
+  position: absolute;
+  right: 40px;
+  top: 13.9px;
+  z-index: 9;
+}
+
+//End
+
+//Workflow CSS
+.FirstDivideDiv {
+  width: 43%;
+}
+
+.MainDivWraper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Buttons {
+  margin-top: 10px;
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.PrimaryButton1Long {
+  // min-width: 131px;
+  // max-width: 135px;
+  // margin-right: 10px;
+  min-width: 90px !important;
+  max-width: 10px !important;
+  align-items: center;
+}
+
+.MainDivideDiv {
+  width: 100%;
+}
+
+.divCenter {
+  width: 55%;
+}
+
+.iconDiv {
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+
+  i {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+}
+
+.MainDiv1Request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerIconRequest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ms-Label {
+    color: var(--lightdarkBGGray) !important;
+  }
+}
+
+.levelcen {
+  padding: 7px;
+  // background-color: #e1c2c3;
+  background-color: var(--lightdarkBGTable);
+}
+
+.MainDiv {
+  border-bottom: 1px solid #e4e4e4;
+  background: var(--lightThemeBGcolorWhite) !important;
+}
+
+.automation-rule-details {
+  .MainDiv {
+    // background-color: var(--lightThemePanelBGSwitcher) !important;
+    background: var(--lightThemeBGcolorWhite) !important;
+  }
+}
+
+.firstFlex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+  border-bottom: 1px solid #e4e4e4;
+  align-items: center;
+  // background-color: #f5f5f5;
+  // THEMES1
+  //  background-color: var(--lightThemeBGcolorWhite) !important;
+}
+
+.firstFlexDarkMode {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+  border-bottom: 1px solid #e4e4e4;
+  align-items: center;
+  background-color: #333;
+}
+
+.Leveleach {
+  // color: white;
+  // background-color: rgb(119, 11, 214);
+  padding: 6px;
+  margin-left: -5px;
+  //themes1
+  color: var(--lightThemeSwitcherTextColor) !important;
+}
+
+.centerIconaddnext {
+  display: flex;
+  justify-content: center;
+  // background: #fff;
+  // THEMES1
+  background-color: var(--lightThemeBGcolorWhite) !important;
+
+  .ms-Button-label {
+    color: var(--lightThemeTextColorBlack) !important;
+  }
+}
+
+.centerIcon {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  height: auto;
+  // THEMES1
+  background-color: var(--lightThemeBGcolorWhite) !important;
+}
+
+.topBarIconCloneEditSet {
+  position: absolute;
+  bottom: 15px;
+  left: 13px;
+  font-size: 13px;
+  //color: rgb(255, 255, 255);
+  padding: 8px 8px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.levelbottom {
+  padding: 7px;
+  background-color: var(--lightdarkBGTable);
+}
+
+.MainDiv1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.seqpardiv {
+  display: flex;
+  align-items: center;
+}
+
+.appmsgnew {
+  margin-right: 189px;
+  font-size: 14px;
+}
+
+.messagemargin {
+  margin-bottom: 5px;
+}
+
+.jobtitlefield {
+  display: flex;
+  justify-content: center;
+  padding: 9px;
+}
+
+.buttonsDiv {
+  display: flex;
+  margin-top: 0px;
+}
+
+.commBarandSearchStyles {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.labelMainDiv {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mainCheckbocDiv {
+  display: flex;
+  flex-flow: row;
+  // display: flex;
+  // -ms-flex-flow: row;
+  // flex-flow: row;
+}
+
+.CheckBoxWidth {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 5px;
+}
+
+.MainFieldWidth {
+  width: 70%;
+}
+
+.flowcheckboxs {
+  flex-flow: wrap;
+  display: -ms-flexbox;
+  display: flex;
+  // flex-flow: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.labelDiv {
+  width: 40%;
+}
+
+.fieldDiv {
+  width: 40%;
+}
+
+.singlecheckbox {
+  position: relative;
+  display: flex;
+  // flex: 0 1 33%;
+  // margin-bottom: 8px;
+}
+
+.singlecheckbox span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  white-space: nowrap;
+}
+
+.editbtn {
+  height: 0px;
+}
+
+.dialogButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.primarybtn {
+  min-width: 90px !important;
+  max-width: 10px !important;
+  text-align: center;
+}
+
+.deletebtn {
+  height: 0px;
+}
+
+.deletebtn {
+  height: 0px;
+}
+
+.custom-select .react-select__menu {
+  max-height: 300px;
+  /* Set the maximum height to 300px */
+  overflow-y: auto;
+}
+
+.callout_popup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 6px;
+  background: var(--lightdarkBGTable);
+  color: var(--lightThemePivotTextBlack);
+}
+
+.CustomFormTooltip {
+  margin-top: 9px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.CustomFormTooltipRequired {
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.LabelAligned {
+  display: flex;
+  align-items: center;
+  background: var(--lightdarkBGTable);
+  padding: 5px 5px;
+  margin-top: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.FieldWidth {
+  width: 42.5%;
+}
+
+.TypeWidth {
+  width: 15%;
+  // padding-left: 20px
+}
+
+.DisplayField {
+  width: 42.5%;
+}
+
+.TypeWidth label,
+.FieldWidth label,
+.DisplayField label {
+  color: var(--lightdarkBGGray) !important;
+  // padding-left: 20px;
+}
+
+.MainSatrtFields {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 42.5%;
+  // border-bottom: 1px solid #ddd;
+}
+
+.MainType {
+  width: 15%;
+  // padding-left: 20px
+}
+
+.MainLabel {
+  width: 42.5%;
+}
+
+.topField {
+  display: flex;
+  align-items: center;
+  // margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  width: calc(100% - 10px);
+  height: 32px;
+}
+
+.LabelAligned2 {
+  width: calc(100% - 1px);
+}
+
+.formHeading {
+  border-bottom: 1px solid var(--lightdarkBG);
+  font-size: 16px;
+  margin: 10px 0px 5px;
+  width: fit-content;
+  font-weight: 700;
+  color: var(--lightdarkBGGray) !important;
+}
+
+.addnewGrid {
+  display: grid;
+  grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+  gap: 0px 10px;
+}
+
+.AzureADIcon {
+  position: absolute;
+  right: 75px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.PersonaNamestyle {
+  color: var(--lightThemeTextColorBlack);
+  font-size: 24px;
+  padding: 1% 0 0 1%;
+}
+
+.PersonaSubtext {
+  color: gray;
+  font-size: 14px;
+  padding: 1% 0 0 1%;
+  display: inline-flex;
+}
+
+.TextfieldPrefix {
+  width: 100%;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 10px;
+  max-width: 155px;
+  padding: 15px 0;
+}
+
+.buttonsMainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.flexAlignSpaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.PosLabel{
+  color: var(--lightdarkBGGray) !important;
+  font-size: 15px;
+}
+.PosValue{
+  color:  var(--lightdarkBGGray) !important;
+  margin-left: 4px;
+  font-weight: 400;
+}
+.StatusUI {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+.EditRequestLoaderWhite {
+  position: fixed;
+  background: #ffffff90;
+  z-index: 1000;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.EditOnboardedLoaderWhite{
+  position: fixed;
+  background: #ffffff90;
+  z-index: 1000;
+  top: 0%;
+  right: 0;
+  width: 65rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.EditRequestLoader {
+  position: fixed;
+  background: #33333320;
+  z-index: 1000;
+  top: 0%;
+  // left: 0;
+  // width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mycustomselect .css-2b097c-container {
+  z-index: 1007;
+}
+
+.ChoiceDropdownselectFiled {
+  width: 60%;
+  margin: 5px;
+}
+
+.MainBoxSelectionField {
+  padding: 0 10px;
+  margin: 15px 0;
+}
+
+.LabelforHeading {
+  display: grid;
+  grid-template-columns: 211px 139px 76px;
+}
+
+.OptionsLabel {
+  width: 39%;
+}
+
+.MainAlignValuespan {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 30%;
+  margin-right: 2%;
+  text-overflow: ellipsis;
+  max-width: 38%;
+}
+
+.MainAlignValueLabel {
+  width: 30%;
+  float: left;
+}
+
+.dropdownsBlockforCondition {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.fieldAndPlusIcon {
+  margin: 5px 0;
+}
+
+.ChoiceDropdown {
+  width: 412px;
+}
+
+.PosMenuStyle>div {
+  width: 100% !important;
+}
+.AddAssessmentStepDiv{
+  padding: 10px;
+  border: 1px solid #dadada;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  background: var(--lightdarkBGTable);
+}
+.AddAssessmentStepDiv label{
+  font-size: 14px;
+  text-align: center;
+}
+.AssessmentStep1Footer{
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+}
+.MainBody{
+  border: 1px solid #dadada;
+  // padding: 10px;
+  margin-bottom: 15px;
+  padding: 10px 0px;
+}
+.Errormessage{
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(164, 38, 44);
+}
+.NumberOfQuestion{
+  border: 1px solid #dadada;
+  margin-bottom: 25px;
+}
+.SuccessMessage{
+  color: #00c9a7;
+  vertical-align: middle;
+  font-size: 18px;
+  border-radius: 0.2rem;
+  background: #05ac8f33;
+}
+.QuestionContent{
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.NumberOfQuestionProgress{
+  height: 0.25rem;
+  margin-top: 0.75rem!important;
+  display: flex;
+  overflow: hidden;
+  background-color: #e3ebf6;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+}
+.CreateAddQuestionsBank{
+  border: 1px solid #dadada;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.AddQuestionDialog>.ms-Dialog-main>.ms-Modal-scrollableContent>.content{
+  .ms-Dialog-header{
+    border: 1px solid #dadada;
+    margin-bottom: 10px;
+  }
+}
+.CreateQuestionDialog>.ms-Dialog-main.main {
+  background-color: #000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ProfileDP{
+  width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    display: block!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    position: relative;
+}
+
+Copy code
+.custom-radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px; /* Adjust as needed for size */
+  cursor: pointer;
+}
+
+.custom-radio::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px; /* Adjust as needed for size */
+  height: 20px; /* Adjust as needed for size */
+  border: 2px solid #3498db; /* Theme color */
+  background-color: #3498db; /* Theme color when selected */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.custom-radio input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.custom-radio input:checked + ::before {
+  background-color: #3498db; /* Theme color when selected */
+}
+
+.AddQuestionmodalheader{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dadada;
+}
+
+.AddQuestionmodalBody{
+  position: relative;
+  flex: 1 1 auto;
+  padding: 10px;
+}
+
+.AddQuestionmodalBodyText{
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+.AddQuestionmodalBodyRadio{
+  border: 1px solid #dadada;
+    border-radius: 3px;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    height: 77px;
+    padding: 10px;
+}
+
+.addquesP{
+  opacity: 1;
+  margin: 0px;
+  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 130px;
+  line-height: 20px;
+  margin-top: 3px;
+}
+
+.AssesmentLastStepRightSide{
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding: 10px 0px !important;
+}
+.AssessmentLastStepData{
+  width: auto;
+  text-align: center;
+  background: var(--lightThemeBorderColor);
+  padding: 5px 0px;
+}
+
+.EssCameraIcon{
+  background: #666666;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  width: 36px;
+  height: 36px;
+  margin-top: 25px;
+  margin-left: 10px;
+  z-index: 1;
+  margin-right: -20px;
+  cursor: pointer;
+}
+.EssCameraIcon:hover{
+  transform: scale3d(1.12, 1.12, 1.12);
+  background-color: #333333;
+}
+
+.ReportDragStyles {
+  width: 100%;
+  padding: 0px 5px;
+  float: left;
+  border-collapse: collapse;
+  background-color: var(--lightThemePanelBGSwitcherN2);
+  border-width: 0px;
+  border-style: solid;
+  border-color: rgb(246, 246, 246);
+  border-image: initial;
+}
+
+.ReportDragStyles tbody tr {
+  height: 30px;
+}
+
+.ReportDragStyles tbody tr:nth-child(2n) {
+  background-color: var(--DashboardBGColor);
+}
+
+.ReportDragiconWidth {
+  width: 50px;
+  padding: 0px 7px;
+  color: var(--lightThemeTextColorBlack);
+}
+
+.ReportDragtitleWidth {
+  font-size: 14px;
+  width: 300px;
+  max-width: 300px;
+color: var(--lightThemeTextColorBlack);
+}
+.PreboardingApprHeader{
+  // height: 80px;
+  background: var(--lightThemeActionButtonBGBlack);
+  padding: 6px 6px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.Step3CourseLeftSideDiv{
+  border: 1px solid #dadada;
+  padding-bottom: 10px !important;
+}
+.Step3CourseRightSideDiv{
+  border: 1px solid #dadada;
+  padding-bottom: 10px !important;
+  background-color: var(--lightThemeBGcolorWhite);
+}
+.CourseChapterStyles{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--lightThemeBGcolorWhite);
+  th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+  th {
+      background-color: #f2f2f2;
+    }
+  tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+}
+

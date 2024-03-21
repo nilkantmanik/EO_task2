@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "unique-records-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/uniqueRecords/UniqueRecordsWebPart.js",
+          "manifest": "./src/webparts/uniqueRecords/UniqueRecordsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "UniqueRecordsWebPartStrings": "lib/webparts/uniqueRecords/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
